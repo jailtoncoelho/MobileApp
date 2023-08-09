@@ -25,4 +25,5 @@ namespace MobileApp.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+    //João Desplancher Neto
 }
