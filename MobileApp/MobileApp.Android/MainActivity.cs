@@ -12,7 +12,7 @@ namespace MobileApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);//jonathan
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -25,4 +25,6 @@ namespace MobileApp.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+    //João Desplancher Neto1
+    //Adicionando nova linha
 }
