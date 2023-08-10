@@ -12,6 +12,10 @@ namespace MobileApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            /**
+            *  Rosas são #FF0000,
+            *  Violetas são #0000FF,
+            **/
             base.OnCreate(savedInstanceState);//jonathan
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
