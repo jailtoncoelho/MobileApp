@@ -12,8 +12,12 @@ namespace MobileApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {         
-            //Matheus
-            base.OnCreate(savedInstanceState);
+            //Matheus            
+            /**
+            *  Rosas são #FF0000,
+            *  Violetas são #0000FF,
+            **/
+            base.OnCreate(savedInstanceState);//jonathan
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -26,4 +30,6 @@ namespace MobileApp.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
+    //João Desplancher Neto1
+    //Adicionando nova linha
 }
