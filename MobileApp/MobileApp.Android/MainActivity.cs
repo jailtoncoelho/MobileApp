@@ -11,7 +11,8 @@ namespace MobileApp.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
-        {
+        {         
+            //Matheus            
             /**
             *  Rosas são #FF0000,
             *  Violetas são #0000FF,
