@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidApp</string>
     <string name="app_text">Hello, Android!</string>
+	<string name="app_bv">Seja bem vindo!</string>
 </resources>
