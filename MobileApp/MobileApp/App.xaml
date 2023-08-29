@@ -4,7 +4,8 @@
              x:Class="MobileApp.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
-    -->
+        //No alto daquele CUME
+    --> 
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
