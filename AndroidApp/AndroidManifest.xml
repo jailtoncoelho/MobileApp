@@ -4,7 +4,6 @@
           android:versionName="Dead Pool"
           package="com.ifpr_telemacoborba.alerts">
   <application android:allowBackup="true"
-               android:debuggable="false"
                android:icon="@mipmap/appicon"
                android:label="@string/app_name"
                android:supportsRtl="true">
