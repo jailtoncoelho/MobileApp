@@ -13,5 +13,14 @@
         android:text="Sobre o App"
         android:textSize="24sp"
         android:textStyle="bold" />
+     <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Este aplicativo está sendo meticulosamente desenvolvido pela turma de TADS 5 do Instituto Federal de Telêmaco Borba. Nosso objetivo primordial é proporcionar uma experiência de aprendizado excepcional, e contamos com a valiosa orientação do Dr. Jailton Júnior De Sousa Coelho."
+        android:textSize="16sp" />
 
 </RelativeLayout>
