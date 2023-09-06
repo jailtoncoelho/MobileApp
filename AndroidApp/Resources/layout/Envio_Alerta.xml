@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
     android:layout_height="match_parent">
-    <TextView 
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/disciplina"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:layout_marginHorizontal="100px"
-
+        android:textSize="70px"
+        android:text="@string/Titulo_disciplina"
     />
-    <Button
-    android:id="@+id/centrally_centered_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Botão Centralizado"
-    android:layout_centerInParent="true" />
+    <EditText 
+        android:id="@+id/campo_disciplina"
+        android:layout_below="@id/disciplina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:text="@string/Valor_disciplina"
+    />
+
 </RelativeLayout>
