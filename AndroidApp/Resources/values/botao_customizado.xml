@@ -1,0 +1,6 @@
+﻿<Button
+    android:id="@+id/centrally_centered_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Botão Centralizado"
+    android:layout_centerInParent="true" />

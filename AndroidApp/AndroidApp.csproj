@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\layout\Envio_Alerta.xml" />
+    <None Remove="Resources\values\botao_customizado.xml" />
   </ItemGroup>
 </Project>
