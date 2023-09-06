@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewName1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="70px"
+        android:text="CADASTRO DE ALUNOS"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+	<TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Aluno"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"/>
+
+	<EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginTop="8dp"
+        android:hint="Digite o nome do aluno"/>
+
+	<TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignStart="@+id/editTextName"
+        android:layout_marginTop="16dp"/>
+
+	<EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPassword"
+        android:layout_marginTop="8dp"
+        android:hint="Digite a senha"
+        android:inputType="textPassword"/>
+
+	<TextView
+        android:id="@+id/textViewConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Senha"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_alignStart="@+id/editTextPassword"
+        android:layout_marginTop="16dp"/>
+
+	<EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewConfirmPassword"
+        android:layout_marginTop="8dp"
+        android:hint="Confirme a senha"
+        android:inputType="textPassword"/>
+
+	<TextView
+        android:id="@+id/textViewStudentID"
+        android:layout_width="wrap-content"
+        android:layout_height="wrap-content"
+        android:text="ID do Aluno"
+        android:layout_below="@+id/editTextConfirmPassword"
+        android:layout_alignStart="@+id/editTextConfirmPassword"
+        android:layout_marginTop="16dp"/>
+
+	<EditText
+        android:id="@+id/editTextStudentID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewStudentID"
+        android:layout_marginTop="8dp"
+        android:hint="Digite o ID do aluno"
+        android:inputType="number"/>
+
+	<Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:layout_below="@+id/editTextStudentID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
+</RelativeLayout>
