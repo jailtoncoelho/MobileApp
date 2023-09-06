@@ -8,4 +8,7 @@
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\layout\Activity_13_PerfilDeUsuarios.xml" />
+  </ItemGroup>
 </Project>
