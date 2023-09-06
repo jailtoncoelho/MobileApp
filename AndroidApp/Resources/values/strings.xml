@@ -2,7 +2,7 @@
     <string name="app_name">IFPR Mobile App - TADS 5</string>
     <string name="app_text">Aba aonde ficara a parte de envio de Alertas</string>
     <string name="titulo_disciplina">Escolha a disciplina</string>
-    <string name="Valor_disciplina"></string>
+    <string name="Valor_disciplina">Gerenciamento de Projetos</string>
 
   <!--
   <Button
