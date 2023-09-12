@@ -12,4 +12,13 @@
         android:layout_marginHorizontal="100px"
         android:text="@string/app_text"
     />
+
+<Button
+        android:id="@+id/btnCadastroAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de alunos"
+        android:layout_below="@+id/editTextStudentID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"/>
 </RelativeLayout>
