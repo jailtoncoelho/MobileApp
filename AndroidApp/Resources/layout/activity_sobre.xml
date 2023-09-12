@@ -28,7 +28,7 @@
 	  android:layout_below="@+id/textViewVersion"
 	  android:layout_centerHorizontal="true"
 	  android:layout_marginTop="440dp"
-	  android:text="Voltar" />
+	  android:text="Voltar" /> 
 
 </RelativeLayout>
 
