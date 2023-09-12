@@ -9,6 +9,6 @@
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Resources\layout\tela_CadastroDeTurma.xml" />
+    <None Remove="Resources\layout\activity_cadastro_turma.xml" />
   </ItemGroup>
 </Project>
