@@ -30,4 +30,7 @@
 	  android:layout_marginTop="440dp"
 	  android:text="Voltar" /> 
 
+		<!--Nome do arquivo não segue um padrão do que o código remete -->
+		<!--Nome alterado para tela_sobre_app -->
+
 </RelativeLayout>
