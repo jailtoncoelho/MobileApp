@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">IFPR Mobile App - TADS 5</string>
     <string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
+    <string name="nomeEvento">Nome do Evento:</string>
+    <string name="descricaoEvento">Descrição do Evento:</string>
+    <string name="responsavelEvento">Responsavel pelo Evento:</string>
+    <string name="grupoEvento">Grupo que deve recever notificação do Evento:</string>
+  
+  
 </resources>
