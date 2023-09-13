@@ -12,5 +12,7 @@ namespace AndroidApp
         public int edtDescricaoEvento { get; set; }
         public int edtResponsavelEvento { get; set; }
         public int rdGrupos { get; set; }
+
+        public int btnEnviar { }
     }
 }
