@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Resources\layout\Activity_13_PerfilDeUsuarios.xml" />
+    <None Remove="Resources\layout\tela_CadastroDeTurma.xml" />
   </ItemGroup>
 </Project>
