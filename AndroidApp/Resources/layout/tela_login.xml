@@ -56,3 +56,4 @@
         android:onClick="onSignUpClick" />
 
 </RelativeLayout>
+<!--O código segue o padrão definido -->
