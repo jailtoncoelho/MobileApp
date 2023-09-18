@@ -3,4 +3,11 @@
   <string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
   <string name="app_cadastro_turma">"Cadastro de Turma"</string>
   <string name="app_sobre">"Sobre"</string>
+  <string name="app_no_text">""</string>
+  <string name="app_menu_home">"Home"</string>
+  <string name="app_menu_eventos">"Eventos"</string>
+  <string name="app_menu_perfil">"Perfil"</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="action_settings">Settings</string>
 </resources>
