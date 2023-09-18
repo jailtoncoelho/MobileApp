@@ -13,6 +13,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\layout\activity_cadastro_turma.xml" />
+    <None Remove="Resources\layout\activity_settings.xml" />
     <None Remove="Resources\layout\menu_principal.xml" />
     <None Remove="Resources\layout\xmlfile1.xml" />
   </ItemGroup>
