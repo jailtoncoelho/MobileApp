@@ -55,7 +55,7 @@
             android:clickable="true"            
             android:contentDescription="@string/app_menu_eventos"
             android:background="@color/transparent"
-            android:id="@+id/imageButtonEventos"/>
+            android:id="@+id/imageButtonEvents"/>
         <Space
             android:layout_width="0dp"
             android:layout_height="1dp"
