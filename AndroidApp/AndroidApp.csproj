@@ -12,6 +12,7 @@
     <None Include="Resources\layout\activity_sobre.xml" />
     <None Include="Resources\layout\activity_cadastro_turma.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
+    <None Include="Resources\layout\activity_login.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.3" />

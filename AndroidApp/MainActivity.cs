@@ -26,6 +26,16 @@ namespace AndroidApp
                     StartActivity(intent);
                 };
             }
+
+            ImageButton? buttonLogin = FindViewById<ImageButton>(Resource.Id.imageButtonPerfil);
+            if (buttonLogin != null)
+            {
+                buttonLogin.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(LoginActivity));
+                    StartActivity(intent);
+                };
+            }
         }
 
 
