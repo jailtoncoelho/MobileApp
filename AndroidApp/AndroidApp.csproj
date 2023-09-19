@@ -5,17 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>2</ApplicationVersion>
+    <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AndroidResource Remove="Resources\layout\menu_principal.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resources\layout\activity_cadastro_turma.xml" />
-    <None Remove="Resources\layout\activity_settings.xml" />
-    <None Remove="Resources\layout\menu_principal.xml" />
-    <None Remove="Resources\layout\xmlfile1.xml" />
+    <None Include="Resources\layout\activity_cadastro_turma.xml" />
+    <None Include="Resources\layout\activity_settings.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.3" />

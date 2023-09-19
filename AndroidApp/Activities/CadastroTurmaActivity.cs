@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AndroidApp
+namespace AndroidApp.Activities
 {
-    internal class CadastroTurma : Activity
+    [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroTurmaActivity")]
+    internal class CadastroTurmaActivity : Activity
     {
         protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            //HM. COMENTEI
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_cadastro_turma);
-            // comentario para branchhh
         }
     }
 }

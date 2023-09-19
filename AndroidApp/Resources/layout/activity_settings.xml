@@ -12,7 +12,7 @@
     android:id="@+id/linearLayoutSettings">
 
     <LinearLayout
-        android:id="@+id/buttonCadastroTurma"
+        android:id="@+id/linearLayoutCadastroTurma"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
