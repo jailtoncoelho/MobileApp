@@ -15,8 +15,6 @@ namespace AndroidApp
             BindingClickEvents();
         }
 
-
-
         private void BindingClickEvents()
         {
             ImageButton? buttonSettings = FindViewById<ImageButton>(Resource.Id.imageButtonSettings);
