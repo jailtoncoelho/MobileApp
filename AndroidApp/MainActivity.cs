@@ -3,7 +3,7 @@ using AndroidApp.Activities;
 
 namespace AndroidApp
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle? savedInstanceState)

@@ -25,6 +25,16 @@ namespace AndroidApp.Activities
                     StartActivity(intent);
                 };
             }
+
+            LinearLayout? buttonSobre = FindViewById<LinearLayout>(Resource.Id.linearLayoutSobre);
+            if (buttonSobre != null)
+            {
+                buttonSobre.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(SobreActivity));
+                    StartActivity(intent);
+                };
+            }
         }
     }
 }
