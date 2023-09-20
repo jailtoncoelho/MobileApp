@@ -35,6 +35,16 @@ namespace AndroidApp.Activities
                     StartActivity(intent);
                 };
             }
+            
+            LinearLayout? buttonCadastroAluno = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroAluno);
+            if (buttonCadastroAluno != null)
+            {
+                buttonCadastroAluno.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(CadastroAlunosActivity));
+                    StartActivity(intent);
+                };
+            }
         }
     }
 }
