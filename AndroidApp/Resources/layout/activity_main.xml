@@ -1,28 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-   <TextView
-        android:id="@+id/textViewTitle"
+    android:layout_height="match_parent"
+    android:layout_below="@id/linearLayout1"
+    android:id="@+id/linearLayout2">
+    <TextView
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginHorizontal="10pt"
+        android:text="@string/app_text"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="20pt"
+        android:minHeight="20pt"
+        android:layout_margin="10pt"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Sobre o App"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-     <TextView
-        android:id="@+id/textViewDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Este aplicativo está sendo meticulosamente desenvolvido pela turma de TADS 5 do Instituto Federal de Telêmaco Borba. Nosso objetivo primordial é proporcionar uma experiência de aprendizado excepcional, e contamos com a valiosa orientação do Dr. Jailton Júnior De Sousa Coelho."
-        android:textSize="16sp" />
-
-        <!--Nome do arquivo sem um padão com  -->
-
-</RelativeLayout>
+        android:id="@+id/linearLayout1">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </Space>
+        <ImageButton
+            android:src="@mipmap/ic_home"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            android:contentDescription="@string/app_menu_eventos"
+            android:background="@color/transparent"
+            android:id="@+id/imageButtonHome"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <ImageButton
+            android:src="@mipmap/ic_event"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:clickable="true"            
+            android:contentDescription="@string/app_menu_eventos"
+            android:background="@color/transparent"
+            android:id="@+id/imageButtonEvents"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <ImageButton
+            android:src="@mipmap/ic_account"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            android:background="@color/transparent"
+            android:contentDescription="@string/app_menu_perfil"
+            android:id="@+id/imageButtonPerfil" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+        <ImageButton
+            android:src="@mipmap/ic_settings"
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            android:background="@color/transparent"
+            android:contentDescription="@string/app_menu_settings"
+            android:id="@+id/imageButtonSettings"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

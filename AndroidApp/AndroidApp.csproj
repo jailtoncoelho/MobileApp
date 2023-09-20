@@ -5,10 +5,22 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>2</ApplicationVersion>
+    <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Remove="Resources\layout\tela_sobre_app.xml" />
+=======
+    <None Include="Resources\layout\activity_sobre.xml" />
+    <None Include="Resources\layout\activity_cadastro_turma.xml" />
+    <None Include="Resources\layout\activity_settings.xml" />
+    <None Include="Resources\layout\activity_login.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.3" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.9.0.2" />
+>>>>>>> origin/feature-dev
   </ItemGroup>
 </Project>
