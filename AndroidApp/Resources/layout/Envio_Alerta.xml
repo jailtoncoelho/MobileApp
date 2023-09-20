@@ -1,25 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
     android:layout_height="match_parent">
-    <TextView
+ <!--   <TextView
         android:id="@+id/disciplina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="70px"
-        android:text="@string/titulo_disciplina"
+        android:text="Titulo da Disciplina"
     />
-    <EditText 
+    <EditText
         android:id="@+id/campo_disciplina"
-        android:layout_below="@id/disciplina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="150px"
         android:layout_centerInParent="false"
-        android:text="@string/Valor_disciplina"
+        android:text="Valor Disciplina"
     />
+    <TextView
+        android:id="@+id/docente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="250px"
+        android:textSize="70px"
+        android:text="Docente Responsavel"
+    />
+    <EditText
+        android:id="@+id/campo_docente"
+        android:layout_below="@id/docente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="70px"
+        android:layout_centerInParent="false"
+        android:text="Valor Disciplina"
+    />
+    <Button
+        android:id="@+id/centrally_centered_button"
+        android:layout_below="@id/campo_disciplina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:l
+        android:text="Botão Centralizado"
+        android:layout_centerInParent="true" 
+    />-->
+
+    <TableLayout
+        android:paddingTop="50px"
+        android:paddingBottom="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:paddingTop="5px"
+            android:paddingBottom="5px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/disciplina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"        
+                android:textSize="70px"
+                android:text="Titulo da Disciplina"/>
+        </TableRow>
+        <TableRow
+            android:paddingTop="5px"
+            android:paddingBottom="5px"            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/campo_disciplina"
+                android:layout_width="match_parent"
+                android:paddingTop="50px"
+                android:layout_centerInParent="false"
+                android:text="Disciplina"
+                android:layout_marginTop="0.0dp"
+                android:layout_marginBottom="0.0dp" />
+        </TableRow>
+        <TableRow
+            android:paddingTop="5px"
+            android:paddingBottom="5px"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/docente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="70px"
+                android:text="Docente Responsavel"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/campo_docente"
+            android:layout_below="@id/docente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50px"
+            android:layout_centerInParent="false"
+            android:text="Docente"/>
+        </TableRow>
+    </TableLayout>
+
+
 
 </RelativeLayout>
