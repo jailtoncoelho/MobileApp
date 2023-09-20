@@ -11,14 +11,9 @@ namespace AndroidApp
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-<<<<<<< HEAD
-            SetContentView(Resource.Layout.tela_sobre_app);
-            // comentario para branchhh
-=======
             SetContentView(Resource.Layout.activity_main);
 
             BindingClickEvents();
->>>>>>> origin/feature-dev
         }
 
         private void BindingClickEvents()
