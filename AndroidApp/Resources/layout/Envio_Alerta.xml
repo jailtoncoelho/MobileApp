@@ -7,39 +7,8 @@
     android:paddingLeft="25dp"
     android:paddingRight="25dp"
     android:layout_height="match_parent">
- <!--   <TextView
-        android:id="@+id/disciplina"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="70px"
-        android:text="Titulo da Disciplina"
-    />
-    <EditText
-        android:id="@+id/campo_disciplina"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="150px"
-        android:layout_centerInParent="false"
-        android:text="Valor Disciplina"
-    />
-    <TextView
-        android:id="@+id/docente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="250px"
-        android:textSize="70px"
-        android:text="Docente Responsavel"
-    />
-    <EditText
-        android:id="@+id/campo_docente"
-        android:layout_below="@id/docente"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="70px"
-        android:layout_centerInParent="false"
-        android:text="Valor Disciplina"
-    />
-    <Button
+ 
+<!--    <Button
         android:id="@+id/centrally_centered_button"
         android:layout_below="@id/campo_disciplina"
         android:layout_width="wrap_content"
@@ -49,6 +18,7 @@
         android:layout_centerInParent="true" 
     />-->
 
+    <!--Tabela para oraganizar o layout do formulario-->
     <TableLayout
         android:paddingTop="50px"
         android:paddingBottom="50px"
