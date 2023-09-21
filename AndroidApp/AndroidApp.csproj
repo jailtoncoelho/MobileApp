@@ -9,6 +9,7 @@
     <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\layout\tela_sobre_app.xml" />
     <None Include="Resources\layout\activity_sobre.xml" />
     <None Include="Resources\layout\activity_cadastro_turma.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
