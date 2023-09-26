@@ -10,9 +10,8 @@
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="Resources\drawable\ic_account.xml" />
-	  <None Remove="Resources\drawable\ic_app_home.xml" />
 	  <None Remove="Resources\drawable\ic_events.xml" />
-	  <None Remove="Resources\drawable\ic_home.xml" />
+	  <None Remove="Resources\drawable\ic_homepage.xml" />
 	  <None Remove="Resources\drawable\ic_settings.xml" />
 	</ItemGroup>
   <ItemGroup>
