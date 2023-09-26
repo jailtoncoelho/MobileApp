@@ -1,4 +1,5 @@
 using Android.Content;
+using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,28 +20,25 @@ namespace AndroidApp.Activities
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_cadastro_turma);
+
+            BindingClickEvents(Resource.Id.linearLayoutCadastroTurma, typeof(CadastroTurmaActivity));
+            BindingClickEvents(Resource.Id.linearLayoutSobre, typeof(SobreActivity));
         }
 
 
-
-        private void BindingClickEvents()
+        /// <summary>
+        /// Metodo que chama a tela atraves da Id da Activity e da clase da tela.
+        /// </summary>
+        /// <param name="buttonId"> Id da Activity </param>
+        /// <param name="activityType"> clase da tela </param>
+        private void BindingClickEvents(int buttonId, Type activityType)
         {
-            LinearLayout? buttonSettings = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroTurma);
-            if (buttonSettings != null)
+            LinearLayout? button = FindViewById<LinearLayout>(buttonId);
+            if (button != null)
             {
-                buttonSettings.Click += delegate
+                button.Click += delegate
                 {
-                    var intent = new Intent(this, typeof(CadastroTurmaActivity));
-                    StartActivity(intent);
-                };
-            }
-
-            LinearLayout? buttonSobre = FindViewById<LinearLayout>(Resource.Id.linearLayoutSobre);
-            if (buttonSobre != null)
-            {
-                buttonSobre.Click += delegate
-                {
-                    var intent = new Intent(this, typeof(SobreActivity));
+                    var intent = new Intent(this, activityType);
                     StartActivity(intent);
                 };
             }
