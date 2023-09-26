@@ -6,17 +6,12 @@
     android:orientation="vertical"
     android:minWidth="25px"
     android:minHeight="25px"
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:minWidth="25px"
-    android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout">
-    <TextView
-    android:layout_height="match_parent"
-    android:id="@+id/relativeLayout1" >
-    <AbsoluteLayout
+
+    
+<AbsoluteLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="wrap_content"
@@ -25,27 +20,14 @@
         android:layout_centerInParent="true"
         android:textAlignment="center"
         android:gravity="center"
-        android:layout_marginHorizontal="10pt"
-        android:text="@string/app_text"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:elevation="10dp"
-        android:layout_gravity="center"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/navigation_menu" />
-
-</LinearLayout>
-
+        android:layout_marginHorizontal="10pt">
 
 
 
 
 
         android:layout_height="wrap_content"
-        android:id="@+id/absoluteLayout1" />
+        android:id="@+id/absoluteLayout1" >
 
         <Toolbar
         android:minHeight="?android:attr/actionBarSize"
@@ -91,5 +73,31 @@
 
 
 
-</RelativeLayout>
+</AbsoluteLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginHorizontal="10pt"
+        android:text="@string/app_text"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:elevation="10dp"
+        android:layout_gravity="center"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation_menu" />
+
+</LinearLayout>
+
+
+
+
+
+
 
