@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:id="@id/linearLayoutCadastroTurma">
+    <TextView
+        android:text="Cadastro de Turma:"
+        android:textSize="90px"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:id="@+id/textView1" />
+    <EditText
+        android:id="@+id/nomeTurma"
+        android:layout_below="@id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome da Turma"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/nomeCurso"
+        android:layout_below="@id/nomeTurma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Curso da Turma"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/anoIngressão"
+        android:layout_below="@id/nomeCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ano da Turma"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/campusDoCurso"
+        android:layout_below="@id/anoIngressão"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Campus da Turma"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/numeroDeAlunos"
+        android:layout_below="@id/campusDoCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero de Alunos"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/anoFormatura"
+        android:layout_below="@id/numeroDeAlunos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Previsão de Formatura"
+        android:inputType="text" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/anoFormatura"
+        android:layout_alignParentRight="true"
+        android:text="Cadastrar Turma" />
+    
+    
+
+</RelativeLayout>
