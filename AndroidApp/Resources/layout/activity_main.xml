@@ -8,8 +8,7 @@
     android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_below="@id/linearLayout1"
-    android:id="@+id/linearLayout2">
+    android:id="@+id/linearLayout">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -19,74 +18,20 @@
         android:gravity="center"
         android:layout_marginHorizontal="10pt"
         android:text="@string/app_text"/>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="20pt"
-        android:minHeight="20pt"
-        android:layout_margin="10pt"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" >
-        </Space>
-        <ImageButton
-            android:src="@mipmap/ic_home"
-            android:layout_width="@dimen/menu_icon_width"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:clickable="true"
-            android:contentDescription="@string/app_menu_eventos"
-            android:background="@color/transparent"
-            android:id="@+id/imageButtonHome"/>
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-        <ImageButton
-            android:src="@mipmap/ic_event"
-            android:layout_width="@dimen/menu_icon_width"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:clickable="true"            
-            android:contentDescription="@string/app_menu_eventos"
-            android:background="@color/transparent"
-            android:id="@+id/imageButtonEvents"/>
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-        <ImageButton
-            android:src="@mipmap/ic_account"
-            android:layout_width="@dimen/menu_icon_width"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:clickable="true"
-            android:background="@color/transparent"
-            android:contentDescription="@string/app_menu_perfil"
-            android:id="@+id/imageButtonPerfil" />
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-        <ImageButton
-            android:src="@mipmap/ic_settings"
-            android:layout_width="@dimen/menu_icon_width"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:clickable="true"
-            android:background="@color/transparent"
-            android:contentDescription="@string/app_menu_settings"
-            android:id="@+id/imageButtonSettings"/>
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-    </LinearLayout>
+        android:layout_height="75dp"
+        android:elevation="10dp"
+        android:layout_gravity="center"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/navigation_menu" />
+
 </LinearLayout>
+
+
+
+
+
+
