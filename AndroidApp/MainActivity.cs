@@ -1,11 +1,12 @@
 using Android.Content;
+using Android.Views;
 using AndroidApp.Activities;
-using System.ComponentModel;
+using Google.Android.Material.BottomNavigation;
 
 namespace AndroidApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : Activity
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    public class MainActivity : Activity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle? savedInstanceState)
         {
@@ -13,9 +14,36 @@ namespace AndroidApp
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
-            BindingClickEvents();
+            BottomNavigationView? navigationView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation_view);
+            navigationView?.SetOnNavigationItemSelectedListener(this);
         }
 
+        public bool OnNavigationItemSelected(IMenuItem item)
+        {
+            int id = item.ItemId;
+
+            if (id == Resource.Id.imageButtonHome)
+            {                
+                Recreate();
+            }
+            else if (id == Resource.Id.imageButtonEvents)
+            {
+
+            }
+            else if (id == Resource.Id.imageButtonPerfil)
+            {
+                var intent = new Intent(this, typeof(PerfilActivity));
+                StartActivity(intent);
+            }
+            else if (id == Resource.Id.imageButtonSettings)
+            {
+                var intent = new Intent(this, typeof(SettingsActivity));
+                StartActivity(intent);
+            }
+
+            return true;
+        }
+        /*
         private void BindingClickEvents()
         {
             ImageButton? buttonHome = FindViewById<ImageButton>(Resource.Id.imageButtonHome);
@@ -46,8 +74,8 @@ namespace AndroidApp
             {
                 buttonPerfil.Click += delegate
                 {
-                    var intent = new Intent(this, typeof(LoginActivity));
-                    StartActivity(intent);
+                    var intent = new Intent(this, typeof(PerfilActivity));
+                    StartActivity(intent);                    
                 };
             }
 
@@ -60,7 +88,7 @@ namespace AndroidApp
                     StartActivity(intent);
                 };
             }
-        }
+        } */
 
 
     }

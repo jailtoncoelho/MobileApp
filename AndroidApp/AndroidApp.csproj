@@ -9,15 +9,29 @@
 		<ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="Resources\layout\activity_sobre.xml" />
-		<None Include="Resources\layout\activity_cadastro_turma.xml" />
-		<None Include="Resources\layout\activity_cadastro_alunos.xml" />
-		<None Include="Resources\layout\activity_settings.xml" />
-		<None Include="Resources\layout\activity_login.xml" />
+	  <None Remove="Resources\drawable\ic_account.xml" />
+	  <None Remove="Resources\drawable\ic_events.xml" />
+	  <None Remove="Resources\drawable\ic_homepage.xml" />
+	  <None Remove="Resources\drawable\ic_settings.xml" />
+	</ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\values\drawables.xml" />
+  </ItemGroup>
+	<ItemGroup>
+	  <None Include="Resources\menu\navigation_menu.xml" />
+	  <None Include="Resources\menu\navigation_perfil.xml" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.1.3" />
-		<PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
-		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.9.0.2" />
+		<None Include="Resources\layout\activity_cadastro_turma.xml" />
+		<None Include="Resources\layout\activity_cadastro_alunos.xml" />
+    <None Include="Resources\layout\activity_login.xml" />
+    <None Include="Resources\layout\activity_perfil.xml" />
+    <None Include="Resources\layout\activity_settings.xml" />
+    <None Include="Resources\layout\activity_sobre.xml" />    
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0.1" />
 	</ItemGroup>
 </Project>
