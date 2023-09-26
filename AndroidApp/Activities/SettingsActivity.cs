@@ -11,6 +11,10 @@ namespace AndroidApp.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_settings);
 
+            /*Toolbar? myToolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            if (myToolbar != null)
+                SetActionBar(myToolbar);*/
+
             BindingClickEvents();
         }
 
@@ -32,6 +36,16 @@ namespace AndroidApp.Activities
                 buttonSobre.Click += delegate
                 {
                     var intent = new Intent(this, typeof(SobreActivity));
+                    StartActivity(intent);
+                };
+            }
+
+            LinearLayout? buttonCadastroAluno = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroAluno);
+            if (buttonCadastroAluno != null)
+            {
+                buttonCadastroAluno.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(CadastroAlunosActivity));
                     StartActivity(intent);
                 };
             }
