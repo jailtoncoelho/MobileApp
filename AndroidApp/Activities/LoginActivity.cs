@@ -11,6 +11,11 @@ namespace AndroidApp.Activities
         
         protected override void OnCreate(Bundle? savedInstanceState)
         {
+            loginView(savedInstanceState);
+        }
+
+        private void loginView(Bundle? savedInstanceState)
+        {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_login);
         }
