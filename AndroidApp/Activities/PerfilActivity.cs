@@ -15,7 +15,7 @@ using Android.Content;
 
 namespace AndroidApp.Activities
 {
-    [Activity(Name = "com.ifpr_telemacoborba.alerts.PerfilActivity", Theme = "@style/AppTheme.NoActionBar")]
+    [Activity(Name = "com.ifpr_telemacoborba.alerts.PerfilActivity", Theme = "@style/Theme.Transparent")]
     public class PerfilActivity : AppCompatActivity,  NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle? savedInstanceState)
