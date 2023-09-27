@@ -72,7 +72,12 @@ namespace AndroidApp
             {
                 buttonEvents.Click += delegate
                 {
-
+                    LinearLayout? layoutContainer = FindViewById<LinearLayout>(Resource.Id.linearLayoutContainer);
+                    if (layoutContainer != null)
+                    {
+                        layoutContainer.RemoveView(layoutContainer);
+                        
+                    }
                 };
             }
 

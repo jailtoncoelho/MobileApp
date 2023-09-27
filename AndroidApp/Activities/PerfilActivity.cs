@@ -57,6 +57,5 @@ namespace AndroidApp.Activities
         {
             Finish();
         }
-
     }
 }

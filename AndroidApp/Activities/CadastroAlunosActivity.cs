@@ -14,12 +14,18 @@ namespace AndroidApp.Activities
         /// <param name="savedInstanceState"></param>
         protected override void OnCreate(Bundle? savedInstanceState)
         {
-           
+
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
+           
+            ///Metodo puxa pagina na main 
+            
+            MostrarPage();
+        }
+
+        private void MostrarPage()
+        {
             SetContentView(Resource.Layout.activity_cadastro_alunos);
-
-
         }
     }
 }
