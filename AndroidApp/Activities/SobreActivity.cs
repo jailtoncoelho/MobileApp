@@ -16,8 +16,15 @@ namespace AndroidApp.Activities
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
+            ExibeConteudoPagina();
+
+        }
+        /// <summary>
+        /// Exibe as funcionalidades na pagina sobre
+        /// </summary>
+        private void ExibeConteudoPagina()
+        {
             SetContentView(Resource.Layout.activity_sobre);
-            
         }
     }
 }
