@@ -95,6 +95,6 @@
         android:layout_height="wrap_content"
         android:text="Confirmar"
         android:layout_below="@+id/editTextStudentID"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="24dp"/>
 </LinearLayout>
