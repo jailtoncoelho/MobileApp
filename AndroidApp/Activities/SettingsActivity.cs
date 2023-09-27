@@ -50,6 +50,14 @@ namespace AndroidApp.Activities
                 };
             }
 
+            ExibeTelaCadastroGrupos();
+        }
+
+        /// <summary>
+        /// Procura pelo layout da tela de grupos e exibe sua respectiva activity.
+        /// </summary>
+        private void ExibeTelaCadastroGrupos()
+        {
             LinearLayout? buttonCadastroGrupo = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroGrupo);
             if (buttonCadastroGrupo != null)
             {
