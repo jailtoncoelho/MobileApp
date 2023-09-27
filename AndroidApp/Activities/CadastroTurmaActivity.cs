@@ -20,7 +20,12 @@ namespace AndroidApp.Activities
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_cadastro_turma);
+            
+            MetodoTeste();
+        }
 
+        private void MetodoTeste()
+        {
             BindingClickEvents(Resource.Id.linearLayoutCadastroTurma, typeof(CadastroTurmaActivity));
             BindingClickEvents(Resource.Id.linearLayoutSobre, typeof(SobreActivity));
         }
