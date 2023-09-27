@@ -72,12 +72,7 @@ namespace AndroidApp
             {
                 buttonEvents.Click += delegate
                 {
-                    LinearLayout? layoutContainer = FindViewById<LinearLayout>(Resource.Id.linearLayoutContainer);
-                    if (layoutContainer != null)
-                    {
-                        layoutContainer.RemoveView(layoutContainer);
-                        
-                    }
+
                 };
             }
 
@@ -87,7 +82,7 @@ namespace AndroidApp
                 buttonPerfil.Click += delegate
                 {
                     var intent = new Intent(this, typeof(PerfilActivity));
-                    StartActivity(intent);                    
+                    StartActivity(intent);
                 };
             }
 

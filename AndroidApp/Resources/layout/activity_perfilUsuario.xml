@@ -55,8 +55,6 @@
         android:layout_height="50dp"
         android:layout_toLeftOf="@id/profileImage"
         android:id="@+id/textInputemail"
-        android:id="@+id/editText1"
-        android:boxStrokeColor="@android:color/black"
         android:layout_marginHorizontal="20dp" 
         
         />
@@ -69,7 +67,6 @@
         android:id="@+id/editText2" 
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
-        android:boxStrokeColor="@android:color/black"
         android:textStyle="bold"
         android:text="Data de Nascimento"
         android:textSize="20sp"
@@ -83,7 +80,6 @@
         android:layout_toLeftOf="@id/profileImage"
         android:id="@+id/textInputdtNasc"
         android:layout_marginHorizontal="20dp"
-        android:boxStrokeColor="@android:color/black"
         android:layout_centerHorizontal="true" 
         
         />
@@ -109,9 +105,7 @@
         android:layout_height="50dp"
         android:layout_toLeftOf="@id/profileImage"
         android:id="@+id/textInputPhone"
-        android:layout_alignLeft="true"
         android:layout_marginLeft="30dp"
-        android:boxStrokeColor="@android:color/black"
         android:layout_marginRight="30.1dp"
         android:layout_centerHorizontal="true" 
         />
