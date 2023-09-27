@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="perfil_nav_view">
+
   <item
-    android:id="@+id/imageButtonHome"
-    android:icon="@drawable/ic_menu_home"
-    android:title="@string/app_menu_home"/>
+   android:id="@+id/imageButtonHome"
+   android:icon="@drawable/ic_menu_home"
+   android:title="@string/app_menu_home"/>
 
   <item
     android:id="@+id/imageButtonEvents"
