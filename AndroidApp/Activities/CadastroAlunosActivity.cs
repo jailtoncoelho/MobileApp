@@ -18,7 +18,7 @@ namespace AndroidApp.Activities
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
            
-            ///Metodo que puxa as informaçoes na tela 
+            ///Metodo puxa pagina na main 
             
             MostrarPage();
         }
