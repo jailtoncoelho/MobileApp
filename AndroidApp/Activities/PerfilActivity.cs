@@ -4,23 +4,19 @@ using Google.Android.Material.Navigation;
 
 namespace AndroidApp.Activities
 {
-    [Activity(Label = "com.ifpr_telemacoborba.alerts.PerfilActivity")]
+    [Activity(Name = "com.ifpr_telemacoborba.alerts.PerfilActivity")]
     public class PerfilActivity : Activity, NavigationView.IOnNavigationItemSelectedListener
     {
         protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            /*RelativeLayout? buttonPerfil = FindViewById<RelativeLayout>(Resource.Id.main_content);
-            if(buttonPerfil != null)
-            {
-            }*/
-            SetContentView(Resource.Layout.activity_perfil);
+            SetContentView(Resource.Layout.activity_perfilUsuario);
 
-            NavigationView? navigationView = FindViewById<NavigationView>(Resource.Id.perfil_nav_view);
+/*            NavigationView? navigationView = FindViewById<NavigationView>(Resource.Id.perfil_nav_view);
             if (navigationView != null)
             {
                 navigationView.SetNavigationItemSelectedListener(this);
-            }
+            }*/
         }
 
 

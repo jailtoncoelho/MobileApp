@@ -5,6 +5,11 @@
     tools:ignore="HardcodedText">
 
   <item
+      android:id="@+id/navigation_login"
+      android:icon="@drawable/ic_menu_login"
+      android:title="Login"/>
+  
+  <item
       android:id="@+id/navigation_meus_dados"
       android:icon="@drawable/ic_menu_meus_dados"
       android:title="Meus dados"/>

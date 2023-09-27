@@ -1,4 +1,7 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <item name="ic_menu_login" type="drawable">@android:drawable/ic_menu_info_details</item>
   <item name="ic_menu_meus_dados" type="drawable">@android:drawable/ic_menu_info_details</item>
   <item name="ic_menu_meus_grupos" type="drawable">@android:drawable/ic_menu_preferences</item>
   <item name="ic_menu_sair" type="drawable">@android:drawable/ic_menu_revert</item>

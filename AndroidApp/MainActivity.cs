@@ -2,7 +2,6 @@ using Android.Content;
 using Android.Views;
 using AndroidApp.Activities;
 using Google.Android.Material.BottomNavigation;
-//using static Xamarin.Essentials.Platform;
 
 namespace AndroidApp
 {
@@ -55,48 +54,6 @@ namespace AndroidApp
                 StartActivity(intent);
             }
         }
-
-        private void BindingClickEvents()
-        {
-            ImageButton? buttonHome = FindViewById<ImageButton>(Resource.Id.imageButtonHome);
-            if (buttonHome != null)
-            {
-                buttonHome.Click += delegate
-                {
-                    Recreate();
-                };
-            }
-
-            ImageButton? buttonEvents = FindViewById<ImageButton>(Resource.Id.imageButtonEvents);
-            if (buttonEvents != null)
-            {
-                buttonEvents.Click += delegate
-                {
-
-                };
-            }
-
-            ImageButton? buttonPerfil = FindViewById<ImageButton>(Resource.Id.imageButtonPerfil);
-            if (buttonPerfil != null)
-            {
-                buttonPerfil.Click += delegate
-                {
-                    var intent = new Intent(this, typeof(PerfilActivity));
-                    StartActivity(intent);
-                };
-            }
-
-            ImageButton? buttonSettings = FindViewById<ImageButton>(Resource.Id.imageButtonSettings);
-            if (buttonSettings != null)
-            {
-                buttonSettings.Click += delegate
-                {
-                    var intent = new Intent(this, typeof(SettingsActivity));
-                    StartActivity(intent);
-                };
-            }
-        }
-
 
     }
 }

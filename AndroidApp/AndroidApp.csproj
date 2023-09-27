@@ -5,14 +5,14 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-		<ApplicationVersion>2</ApplicationVersion>
-		<ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
+		<ApplicationVersion>3</ApplicationVersion>
+		<ApplicationDisplayVersion>3.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Remove="Resources\drawable\ic_account.xml" />
-	  <None Remove="Resources\drawable\ic_events.xml" />
-	  <None Remove="Resources\drawable\ic_homepage.xml" />
-	  <None Remove="Resources\drawable\ic_settings.xml" />
+	  <None Include="Resources\drawable\ic_account.xml" />
+	  <None Include="Resources\drawable\ic_events.xml" />
+	  <None Include="Resources\drawable\ic_homepage.xml" />
+	  <None Include="Resources\drawable\ic_settings.xml" />
 	</ItemGroup>
   <ItemGroup>
     <None Include="Resources\values\drawables.xml" />
@@ -23,9 +23,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Resources\layout\activity_cadastro_turma.xml" />
-		<None Include="Resources\layout\activity_cadastro_alunos.xml" />
+		<None Include="Resources\layout\activity_cadastro_alunos.xml" />    
     <None Include="Resources\layout\activity_login.xml" />
     <None Include="Resources\layout\activity_perfil.xml" />
+    <None Include="Resources\layout\activity_perfilUsuario.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
     <None Include="Resources\layout\activity_sobre.xml" />    
 	</ItemGroup>
