@@ -28,21 +28,29 @@ namespace AndroidApp.Activities
         {
             int id = item.ItemId;
 
-            if (id == Resource.Id.navigation_meus_dados)
+            goToPage(id);
+
+            return true;
+        }
+
+        /// <summary>
+        /// set the selected page by the selected button id
+        /// </summary>
+        /// <param name="itemId"></param>
+        public void goToPage(int itemId){
+            if (itemId == Resource.Id.navigation_meus_dados)
             {
                 var intent = new Intent(this, typeof(LoginActivity));
                 StartActivity(intent);
             }
-            else if (id == Resource.Id.navigation_meus_grupos)
+            else if (itemId == Resource.Id.navigation_meus_grupos)
             {
 
             }
-            else if (id == Resource.Id.navigation_sair)
+            else if (itemId == Resource.Id.navigation_sair)
             {
                 Finish();
             }
-
-            return true;
         }
 
         public override void OnBackPressed()
