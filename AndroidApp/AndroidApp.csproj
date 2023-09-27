@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net7.0-android</TargetFramework>
 		<OutputType>Exe</OutputType>
@@ -24,6 +24,7 @@
 	<ItemGroup>
 		<None Include="Resources\layout\activity_cadastro_turma.xml" />
 		<None Include="Resources\layout\activity_cadastro_alunos.xml" />
+    <None Include="Resources\layout\activity_criacao_grupos.xml" />
     <None Include="Resources\layout\activity_login.xml" />
     <None Include="Resources\layout\activity_perfil.xml" />
     <None Include="Resources\layout\activity_settings.xml" />

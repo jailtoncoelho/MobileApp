@@ -1,11 +1,10 @@
 ﻿using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
 
 namespace SeuApp.Views
 {
     [Activity(Label = "Professores")]
-    public class TeachersView : AppCompatActivity
+    public class TeachersView : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {

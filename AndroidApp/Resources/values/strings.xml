@@ -16,6 +16,7 @@
 	<string name="navigation_drawer_close">Close navigation drawer</string>
 	<string name="action_settings">Settings</string>
 	<string name="cadastro_turma">Cadastro de Turmas</string>
-	<string name="cadastro_aluno">Cadastro de Alunos</string>
+  <string name="cadastro_aluno">Cadastro de Alunos</string>
+  <string name="app_grupo">"Cadastro de Grupos"</string>
   <string name="ver_grupos">Ver Grupos</string>
 </resources>

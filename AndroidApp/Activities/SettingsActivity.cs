@@ -49,7 +49,16 @@ namespace AndroidApp.Activities
                     StartActivity(intent);
                 };
             }
+
+            LinearLayout? buttonCadastroGrupo = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroGrupo);
+            if (buttonCadastroGrupo != null)
+            {
+                buttonCadastroGrupo.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(CadastroGrupoActivity));
+                    StartActivity(intent);
+                };
+            }
         }
     }
 }
-
