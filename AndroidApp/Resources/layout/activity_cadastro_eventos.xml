@@ -14,7 +14,7 @@
         android:id="@+id/txtLabel"
         android:textStyle="bold" />
     <TextView
-        android:text="@string/nomeEvento"
+        android:text="@string/evento_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtNomeEvento" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edtNomeEvento" />
     <TextView
-        android:text="@string/descricaoEvento"
+        android:text="@string/evento_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtDescricaoEvento" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edtDescricaoEvento" />
     <TextView
-        android:text="@string/responsavelEvento"
+        android:text="@string/evento_responsavel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtResponsavelEvento" />
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/edtResponsavelEvento" />
     <TextView
-        android:text="@string/grupoEvento"
+        android:text="@string/evento_grupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtGrupoEvento" />

@@ -39,9 +39,8 @@ namespace AndroidApp
             }
             else if (id == Resource.Id.imageButtonEvents)
             {
-                //  var intent = new Intent(this, typeof(EventsActivity));
-                //  StartActivity(intent);
-
+                var intent = new Intent(this, typeof(CadastroEventosActivity));
+                StartActivity(intent);
             }
             else if (id == Resource.Id.imageButtonPerfil)
             {
