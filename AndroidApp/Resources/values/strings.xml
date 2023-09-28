@@ -14,6 +14,7 @@
 	<string name="cadastro_turma">Cadastro de Turmas</string>
 	<string name="cadastro_aluno">Cadastro de Alunos</string>
   <string name="cadastro_disciplina">Cadastro de Disciplinas</string>
+  <string name="cadastro_grupo">Cadastro de Grupos</string>
 
   <string name="evento_nome">Nome do Evento</string>
   <string name="evento_descricao">Descrição do Evento</string>

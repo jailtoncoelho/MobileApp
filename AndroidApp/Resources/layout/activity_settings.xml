@@ -124,7 +124,7 @@
             android:layout_marginHorizontal="10dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:contentDescription="@string/app_sobre"
+            android:contentDescription="@string/cadastro_grupo"
             android:src="@mipmap/ic_group" />
 
         <TextView
@@ -135,7 +135,7 @@
             android:textSize="24sp"
             android:paddingRight="30dp"
             android:gravity="left"
-            android:text="@string/app_grupo" />
+            android:text="@string/cadastro_grupo" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"

@@ -17,7 +17,7 @@ namespace AndroidApp.Activities
 
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_criacao_grupos);
+            SetContentView(Resource.Layout.activity_cadastro_grupos);
 
         }
     }

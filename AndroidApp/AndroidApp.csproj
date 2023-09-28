@@ -5,8 +5,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-		<ApplicationVersion>3</ApplicationVersion>
-		<ApplicationDisplayVersion>3.0</ApplicationDisplayVersion>
+		<ApplicationVersion>4</ApplicationVersion>
+		<ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Include="Resources\drawable\ic_account.xml" />
@@ -25,6 +25,7 @@
     <None Include="Resources\layout\activity_cadastro_alunos.xml" />
     <None Include="Resources\layout\activity_cadastro_disciplinas.xml" />
     <None Include="Resources\layout\activity_cadastro_eventos.xml" />
+    <None Include="Resources\layout\activity_cadastro_grupos.xml" />
     <None Include="Resources\layout\activity_cadastro_turma.xml" />		   
     <None Include="Resources\layout\activity_login.xml" />
     <None Include="Resources\layout\activity_perfil.xml" />
