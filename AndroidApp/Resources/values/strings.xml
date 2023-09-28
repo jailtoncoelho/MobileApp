@@ -20,4 +20,6 @@
   <string name="evento_descricao">Descrição do Evento</string>
   <string name="evento_grupo">Responsável</string>
   <string name="evento_responsavel">Grupos</string>
+
+  <string name="ver_grupos">Ver Grupos</string>
 </resources>

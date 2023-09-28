@@ -55,6 +55,8 @@ namespace AndroidApp.Activities
                     StartActivity(intent);
                 };
             }
+
+            ExibeTelaCadastroGrupos();
         }
 
         /// <summary>
