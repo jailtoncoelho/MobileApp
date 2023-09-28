@@ -22,9 +22,9 @@
 	  <None Include="Resources\menu\navigation_perfil.xml" />
 	</ItemGroup>
 	<ItemGroup>
+    <None Include="Resources\layout\activity_cadastro_alunos.xml" />
     <None Include="Resources\layout\activity_cadastro_disciplinas.xml" />
-		<None Include="Resources\layout\activity_cadastro_turma.xml" />
-		<None Include="Resources\layout\activity_cadastro_alunos.xml" />    
+		<None Include="Resources\layout\activity_cadastro_turma.xml" />		   
     <None Include="Resources\layout\activity_login.xml" />
     <None Include="Resources\layout\activity_perfil.xml" />
     <None Include="Resources\layout\activity_perfilUsuario.xml" />

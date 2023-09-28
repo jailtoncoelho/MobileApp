@@ -26,12 +26,12 @@ namespace AndroidApp.Activities
                 };
             }
 
-            LinearLayout? buttonSobre = FindViewById<LinearLayout>(Resource.Id.linearLayoutSobre);
-            if (buttonSobre != null)
+            LinearLayout? buttonCadastroDisciplina = FindViewById<LinearLayout>(Resource.Id.linearLayoutCadastroDisciplinas);
+            if (buttonCadastroDisciplina != null)
             {
-                buttonSobre.Click += delegate
+                buttonCadastroDisciplina.Click += delegate
                 {
-                    var intent = new Intent(this, typeof(SobreActivity));
+                    var intent = new Intent(this, typeof(CadastroDisciplinasActivity));
                     StartActivity(intent);
                 };
             }
@@ -42,6 +42,16 @@ namespace AndroidApp.Activities
                 buttonCadastroAluno.Click += delegate
                 {
                     var intent = new Intent(this, typeof(CadastroAlunosActivity));
+                    StartActivity(intent);
+                };
+            }
+
+            LinearLayout? buttonSobre = FindViewById<LinearLayout>(Resource.Id.linearLayoutSobre);
+            if (buttonSobre != null)
+            {
+                buttonSobre.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(SobreActivity));
                     StartActivity(intent);
                 };
             }

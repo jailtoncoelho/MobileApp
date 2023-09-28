@@ -38,11 +38,44 @@
             android:gravity="left"
             android:text="@string/cadastro_turma" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
 
+        <LinearLayout
+        android:id="@+id/linearLayoutCadastroDisciplinas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/menu_icon_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/cadastro_disciplina"
+            android:src="@mipmap/ic_group" />
+
+        <TextView
+            android:id="@+id/textViewCadastroDisciplina"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="24sp"
+            android:paddingRight="30dp"
+            android:gravity="left"
+            android:text="@string/cadastro_disciplina" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
     <LinearLayout
         android:id="@+id/linearLayoutCadastroAluno"
         android:layout_width="fill_parent"
