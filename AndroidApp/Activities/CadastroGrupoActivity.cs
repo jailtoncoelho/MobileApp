@@ -3,10 +3,10 @@
 namespace AndroidApp.Activities
 {
     /// <summary>
-    /// Criado Activity para a tela Cadastro de alunos
+    /// Criado Activity para a tela Cadastro de Grupos
     /// </summary>
-    [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroAlunosActivity")]
-    internal class CadastroAlunosActivity : Activity
+    [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroGrupoActivity")]
+    internal class CadastroGrupoActivity : Activity
     {
         /// <summary>
         /// Metodo OnCreate é chamado quando a tela é criada e intancia o estado
@@ -17,15 +17,8 @@ namespace AndroidApp.Activities
 
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-           
-            ///Metodo puxa pagina na main 
-            
-            MostrarPage();
-        }
+            SetContentView(Resource.Layout.activity_criacao_grupos);
 
-        private void MostrarPage()
-        {
-            SetContentView(Resource.Layout.activity_cadastro_alunos);
         }
     }
 }
