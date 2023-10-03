@@ -5,13 +5,69 @@
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
+    <!-- Adicione um layout vertical para centralizar o EditText e o SearchView no meio -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <!-- Título "Nome do Grupo" -->
+        <TextView
+            android:text="Nome do Grupo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/textView1" />
+
+        <!-- Campo de texto para digitar o nome do grupo -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Digite aqui"
+            android:layout_gravity="center"
+            android:id="@+id/editText1" />
+
+        <!-- Campo de pesquisa -->
+        <SearchView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/searchView1" >
+        </SearchView>
+
+        <!-- Botão "Adicionar Novo Grupo" após os elementos EditText e SearchView -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText1"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:text="Criar Grupo"
+            android:id="@+id/btnNewGroup"/>
+
+    </LinearLayout>
+
+    <!-- Botão "Adicionar Novo Grupo" após os elementos EditText e SearchView -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_below="@id/editText1"
+        android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:layout_marginHorizontal="16dp"
-        android:text="@string/ver_grupos"
-        android:id="@+id/btnStudents"/>
+        android:text="+ Novo Grupo"
+        android:id="@+id/btnNewGroup"/>
+
+    <!-- Botão "Ver Grupos" no final -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:text="Ver Grupos"
+        android:id="@+id/btnViewGroups"/>
 
 </RelativeLayout>

@@ -19,4 +19,6 @@
   <string name="cadastro_aluno">Cadastro de Alunos</string>
   <string name="app_grupo">"Cadastro de Grupos"</string>
   <string name="ver_grupos">Ver Grupos</string>
+  <string name="digite_aqui">Digite Aqui</string>
+  <string name="novo_grupo">+ Novo Grupo</string>
 </resources>
