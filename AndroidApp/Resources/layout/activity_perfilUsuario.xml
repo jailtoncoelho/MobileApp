@@ -148,7 +148,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="20dp"
-        android:id="@+id/linearLayout1">
+        android:id="@+id/linearLayout1"
+        >
 
         <!-- Botão de Editar Perfil -->
         <Button
@@ -169,7 +170,6 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:text="Cancelar"/>
         
-            
       
     </LinearLayout> 
         
