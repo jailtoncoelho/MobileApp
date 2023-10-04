@@ -7,5 +7,8 @@
 	<dimen name="fab_margin">16dp</dimen>
 	<dimen name="menu_icon_width">40dp</dimen>
 	<dimen name="inputTextHeight">20dp</dimen>
-	<dimen name="buttonWidth">100dp</dimen>
+	<dimen name="buttonWidth">150dp</dimen>
+	<dimen name="buttonHeight">70dp</dimen>
+	<dimen name="arredBorda">50dp</dimen>
+
 </resources>
