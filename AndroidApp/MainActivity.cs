@@ -1,7 +1,12 @@
 using Android.Content;
 using Android.Views;
 using AndroidApp.Activities;
+using AndroidApp.BaseClasses;
+using Firebase;
+using Firebase.Database;
 using Google.Android.Material.BottomNavigation;
+using Xamarin.Essentials;
+using FirebaseOptions = Firebase.FirebaseOptions;
 
 namespace AndroidApp
 {
@@ -10,14 +15,33 @@ namespace AndroidApp
     {
         protected override void OnCreate(Bundle? savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
             BottomNavigationView? navigationView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation_view);
             navigationView?.SetOnNavigationItemSelectedListener(this);
+
+            GetAllEvents();
         }
 
+        public async Task<List<Evento>> GetAllEvents()
+        {
+            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+
+            var eventos = (await firebase
+              .Child("eventos")
+              .OnceAsync<Evento>()).Select(item => new Evento
+              {
+                  Nome = item.Object.Nome,
+                  Data = item.Object.Data
+              }).ToList();
+
+            return eventos;
+        }
+
+    
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;

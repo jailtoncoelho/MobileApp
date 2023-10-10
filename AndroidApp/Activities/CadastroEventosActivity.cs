@@ -1,4 +1,7 @@
-﻿using Android.Content;
+﻿using Firebase;
+using Firebase.Database;
+using Google.Android.Material.BottomNavigation;
+using Newtonsoft.Json;
 
 namespace AndroidApp.Activities
 {
@@ -16,17 +19,58 @@ namespace AndroidApp.Activities
         {
 
             base.OnCreate(savedInstanceState);
+
             // Set our view from the "main" layout resource
-           
-            ///Metodo que puxa as informaçoes na tela 
-            
             MostrarPage();
+
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnEnviar);
+            // Associe um evento de clique
+            btnEnviar.Click += (sender, e) =>
+            {
+                // O botão foi clicado, execute o código desejado aqui
+                // Por exemplo, exiba uma mensagem
+                CriaNoEventosSeNaoExistirAsync();
+            };
+
+        }
+
+        // Manipulador de evento para o clique do botão
+        private void Enviar_Click(object sender, System.EventArgs e)
+        {
+            // O botão foi clicado, execute o código desejado aqui
+            // Por exemplo, exiba uma mensagem
+            CriaNoEventosSeNaoExistirAsync();
+        }
+
+        private async Task CriaNoEventosSeNaoExistirAsync()
+        {
+
+            // Crie um objeto com os dados que deseja salvar
+            var dados = new
+            {
+                Nome = "SEPEX",
+                Data = "04/10/2023"
+            };
+
+            // Converta o objeto para JSON
+            string jsonDados = JsonConvert.SerializeObject(dados);
+
+
+
+            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+            await firebase
+                .Child("eventos")
+                .PostAsync(jsonDados);
+
+
         }
 
         private void MostrarPage()
         {
             SetContentView(Resource.Layout.activity_cadastro_eventos);
         }
+
+
     }
 }
 
