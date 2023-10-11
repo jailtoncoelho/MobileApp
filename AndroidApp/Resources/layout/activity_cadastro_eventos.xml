@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtLabel"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
     <TextView
         android:text="@string/evento_nome"
         android:layout_width="match_parent"
@@ -58,17 +59,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="TADS"
+            android:text="@string/evento_TADS"
             android:id="@+id/radioTads" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ENGEL"
+            android:text="@string/evento_ENGEL"
             android:id="@+id/radioEngel" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AUTOMAÇÂO"
+            android:text="@string/evento_AUTOMAÇÃO"
             android:id="@+id/radioAutomacao" />
     </RadioGroup>
 
@@ -81,14 +82,14 @@
         android:id="@+id/linearLayout2"
         android:layout_gravity="bottom">
         <Button
-            android:text="Cancelar"
+            android:text="@string/evento_cancelar"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/btnCancelar"
             android:layout_marginRight="0.0dp"
             android:layout_gravity="left|end" />
         <Button
-            android:text="Enviar"
+            android:text="@string/evento_enviar"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/btnEnviar"
