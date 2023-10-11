@@ -1,4 +1,7 @@
 ﻿using Android.Content;
+using Firebase.Database;
+using Newtonsoft.Json;
+
 
 namespace AndroidApp.Activities
 {
@@ -21,8 +24,44 @@ namespace AndroidApp.Activities
             ///Metodo puxa pagina na main 
             
             MostrarPage();
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnConfirm);
+            if (btnEnviar != null)
+            {
+                // Associe um evento de clique
+                btnEnviar.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    // Por exemplo, exiba uma mensagem
+                    CadastraUserAsync();
+                };
+            }
         }
 
+
+        private async Task CadastraUserAsync()
+        {
+
+            // Crie um objeto com os dados que deseja salvar
+            var dados = new
+            {
+                Nome = "@+id/editTextName",
+                Senha = "@+id/editTextPassword",
+                ConfirmSenha = "@+id/editTextConfirmPassword",
+                ID = "@+id/editTextAlunoID"
+            };
+
+            // Converta o objeto para JSON
+            string jsonDados = JsonConvert.SerializeObject(dados);
+
+
+
+            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+            await firebase
+                .Child("usuarios")
+                .PostAsync(jsonDados);
+
+
+        }
         private void MostrarPage()
         {
             SetContentView(Resource.Layout.activity_cadastro_alunos);

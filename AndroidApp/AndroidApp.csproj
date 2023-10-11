@@ -9,6 +9,9 @@
 		<ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Resources\layout\view_usuarios.xml" />
+	</ItemGroup>
+	<ItemGroup>
 	  <None Include="Resources\drawable\ic_account.xml" />
 	  <None Include="Resources\drawable\ic_events.xml" />
 	  <None Include="Resources\drawable\ic_homepage.xml" />

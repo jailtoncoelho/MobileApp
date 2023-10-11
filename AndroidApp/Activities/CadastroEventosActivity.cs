@@ -76,4 +76,3 @@ namespace AndroidApp.Activities
 
     }
 }
-
