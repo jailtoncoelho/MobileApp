@@ -8,6 +8,11 @@
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1">
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
         android:text="@string/app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,41 +20,74 @@
         android:textStyle="bold"
         android:layout_gravity="center_horizontal" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtNomeEvento" />
+        android:id="@+id/txtNomeEvento"
+         />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtNomeEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtDescricaoEvento" />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtDescricaoEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_responsavel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtResponsavelEvento" />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtResponsavelEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_grupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtGrupoEvento" />
     <RadioGroup
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
@@ -74,6 +112,11 @@
     </RadioGroup>
 
     <LinearLayout
+        
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"        
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
