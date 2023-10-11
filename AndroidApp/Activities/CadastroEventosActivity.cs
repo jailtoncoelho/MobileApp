@@ -24,13 +24,16 @@ namespace AndroidApp.Activities
             MostrarPage();
 
             Button? btnEnviar = FindViewById<Button>(Resource.Id.btnEnviar);
-            // Associe um evento de clique
-            btnEnviar.Click += (sender, e) =>
+            if (btnEnviar != null)
             {
-                // O botão foi clicado, execute o código desejado aqui
-                // Por exemplo, exiba uma mensagem
-                CriaNoEventosSeNaoExistirAsync();
-            };
+                // Associe um evento de clique
+                btnEnviar.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    // Por exemplo, exiba uma mensagem
+                    CriaNoEventosSeNaoExistirAsync();
+                };
+            }
 
         }
 
