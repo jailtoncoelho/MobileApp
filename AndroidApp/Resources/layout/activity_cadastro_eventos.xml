@@ -8,47 +8,86 @@
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1">
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
         android:text="@string/app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtLabel"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtNomeEvento" />
+        android:id="@+id/txtNomeEvento"
+         />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtNomeEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtDescricaoEvento" />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtDescricaoEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_responsavel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtResponsavelEvento" />
     <EditText
+        android:layout_width="fill_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtResponsavelEvento" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="@string/evento_grupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtGrupoEvento" />
     <RadioGroup
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
@@ -58,21 +97,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="TADS"
+            android:text="@string/evento_TADS"
             android:id="@+id/radioTads" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ENGEL"
+            android:text="@string/evento_ENGEL"
             android:id="@+id/radioEngel" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AUTOMAÇÂO"
+            android:text="@string/evento_AUTOMAÇÃO"
             android:id="@+id/radioAutomacao" />
     </RadioGroup>
 
     <LinearLayout
+        
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"        
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
@@ -81,14 +125,14 @@
         android:id="@+id/linearLayout2"
         android:layout_gravity="bottom">
         <Button
-            android:text="Cancelar"
+            android:text="@string/evento_cancelar"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/btnCancelar"
             android:layout_marginRight="0.0dp"
             android:layout_gravity="left|end" />
         <Button
-            android:text="Enviar"
+            android:text="@string/evento_enviar"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:id="@+id/btnEnviar"
