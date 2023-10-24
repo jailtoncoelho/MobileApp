@@ -45,7 +45,6 @@ namespace AndroidApp
 
             EventoAdapter adapter = new EventoAdapter(this, lstEventos);
             listView.Adapter = adapter;
-
         }
 
         public async Task<List<Evento>> GetAllEvents()
