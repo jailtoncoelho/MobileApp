@@ -21,20 +21,14 @@
   <string name="evento_descricao">Descrição do Evento</string>
   <string name="evento_grupo">Responsável</string>
   <string name="evento_responsavel">Grupos</string>
+  <string name="evento_data">Data de Início</string>
   <string name="evento_cancelar">CANCELAR</string>
   <string name="evento_enviar">ENVIAR</string>
   <string name="evento_TADS">TADS</string>
   <string name="evento_ENGEL">ENGEL</string>
-  <string name="evento_AUTOMAÇÃO">AUTOMAÇÃO</string>
+  <string name="evento_AUTOMAÇÃO">AUTOMAÇÃO</string>  
   
-  
-	<string name="ver_turma">Ver Turma</string>
-
-	<string name="evento_nome">Nome do Evento</string>
-	<string name="evento_descricao">Descrição do Evento</string>
-	<string name="evento_grupo">Responsável</string>
-	<string name="evento_responsavel">Grupos</string>
-  <string name="evento_data">Data de Início</string>
+	<string name="ver_turma">Ver Turma</string> 
 
   <string name="perfil_nomeUser">Nome do Usuário</string>
 	<string name="perfil_info">Informações do Perfil</string>
