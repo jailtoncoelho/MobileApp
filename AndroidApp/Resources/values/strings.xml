@@ -23,8 +23,9 @@
 	<string name="evento_descricao">Descrição do Evento</string>
 	<string name="evento_grupo">Responsável</string>
 	<string name="evento_responsavel">Grupos</string>
+  <string name="evento_data">Data de Início</string>
 
-	<string name="perfil_nomeUser">Nome do Usuário</string>
+  <string name="perfil_nomeUser">Nome do Usuário</string>
 	<string name="perfil_info">Informações do Perfil</string>
 	<string name="perfil_email">Email</string>
 	<string name="perfil_dataNascimento">Data de Nascimento</string>

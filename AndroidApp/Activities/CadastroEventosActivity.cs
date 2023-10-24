@@ -47,24 +47,39 @@ namespace AndroidApp.Activities
 
         private async Task CriaNoEventosSeNaoExistirAsync()
         {
+            var nomeEvento = FindViewById<EditText>(Resource.Id.edtNomeEvento);
+            var descricaoevento = FindViewById<EditText>(Resource.Id.edtDescricaoEvento);
+            var dataEvento = FindViewById<DatePicker>(Resource.Id.datePickerDataEvento);
 
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
-                Nome = "SEPEX",
-                Data = "04/10/2023"
-            };
+                Nome = nomeEvento?.Text,
+                Descricao = descricaoevento?.Text,
+                Data = dataEvento?.DateTime.ToShortDateString()
+            };            
 
             // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
-
-
             FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
-            await firebase
+            var result = await firebase
                 .Child("eventos")
                 .PostAsync(jsonDados);
 
+            if (result != null)
+            {
+                // reinicia valores dos campos da tela
+                nomeEvento.Text = "";
+                descricaoevento.Text = "";
+                dataEvento.DateTime = DateTime.Now;                
+               
+                Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
+            }
+            else
+            {
+                Toast.MakeText(this, "O evento não pôde ser cadastrado!", ToastLength.Short)?.Show();
+            }
 
         }
 
