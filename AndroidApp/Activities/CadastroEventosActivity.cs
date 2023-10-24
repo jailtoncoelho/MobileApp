@@ -35,6 +35,17 @@ namespace AndroidApp.Activities
                 };
             }
 
+            Button? btnCancelar = FindViewById<Button>(Resource.Id.btnCancelar);
+            if (btnCancelar != null)
+            {
+                // Associe um evento de clique
+                btnCancelar.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    Finish();
+                };
+            }
+
         }
 
         // Manipulador de evento para o clique do botão

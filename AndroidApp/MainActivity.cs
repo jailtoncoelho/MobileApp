@@ -27,6 +27,13 @@ namespace AndroidApp
             BottomNavigationView? navigationView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation_view);
             navigationView?.SetOnNavigationItemSelectedListener(this);
 
+
+            showsEventos();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
             showsEventos();
         }
 
