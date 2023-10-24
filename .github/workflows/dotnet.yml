@@ -31,13 +31,3 @@ jobs:
     - name: Test Android Project
       run: dotnet test AndroidApp.sln  # Substitua YourProjectName pela solução do seu projeto
 
-    # Se você também deseja gerar um pacote de distribuição ou implantar o aplicativo,
-    # adicione as etapas apropriadas aqui.
-
-    - name: Upload Artifacts
-      if: success()
-      uses: actions/upload-artifact@v2
-      with:
-        name: build-artifacts
-        path: |
-          path/to/your/artifacts  # Substitua pelo caminho dos seus artefatos, se aplicável
