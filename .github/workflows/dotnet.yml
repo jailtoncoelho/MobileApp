@@ -23,11 +23,11 @@ jobs:
         dotnet-version: 7.0.x  # Altere para a versão desejada
 
     - name: Restore NuGet Packages
-      run: dotnet restore
+      run: dotnet restore AndroidApp.sln
 
     - name: Build Android Project
-      run: dotnet build AndroidApp.sln  # Substitua YourProjectName pela solução do seu projeto
+      run: dotnet build AndroidApp.sln
 
     - name: Test Android Project
-      run: dotnet test AndroidApp.sln  # Substitua YourProjectName pela solução do seu projeto
+      run: dotnet test AndroidApp.sln
 
