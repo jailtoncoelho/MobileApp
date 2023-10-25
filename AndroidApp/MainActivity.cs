@@ -1,14 +1,10 @@
 using Android.Content;
 using Android.Views;
-using Android.Widget;
 using AndroidApp.Activities;
 using AndroidApp.BaseClasses;
-using AndroidX.AppCompat.View.Menu;
 using Firebase;
 using Firebase.Database;
 using Google.Android.Material.BottomNavigation;
-using Xamarin.Essentials;
-using FirebaseOptions = Firebase.FirebaseOptions;
 
 namespace AndroidApp
 {
@@ -17,10 +13,17 @@ namespace AndroidApp
     {
         private List<Evento> lstEventos;
 
+        
+
         protected override void OnCreate(Bundle? savedInstanceState)
         {
 
             base.OnCreate(savedInstanceState);
+
+            FirebaseApp.InitializeApp(Application.Context);
+
+            
+
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
 
@@ -58,9 +61,7 @@ namespace AndroidApp
                   Nome = item.Object.Nome,
                   Descricao = item.Object.Descricao,
                   Data = item.Object.Data
-              }).ToList();
-
-            
+              }).ToList();            
 
             return eventos;
         }
