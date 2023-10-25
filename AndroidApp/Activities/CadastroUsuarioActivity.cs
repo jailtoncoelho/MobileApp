@@ -51,9 +51,6 @@ namespace AndroidApp.Activities
 
             if (senhaUser == confSenhaUser)
             {
-
-
-
                 // Crie um objeto com os dados que deseja salvar
                 var dados = new
                 {
@@ -78,11 +75,11 @@ namespace AndroidApp.Activities
                     senhaUser.Text = "";
                     emailUser.Text = "";
 
-                    Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
+                    Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
                 }
                 else
                 {
-                    Toast.MakeText(this, "O evento não pôde ser cadastrado!", ToastLength.Short)?.Show();
+                    Toast.MakeText(this, "O usuário não pôde ser cadastrado!", ToastLength.Short)?.Show();
                 }
             }
             else

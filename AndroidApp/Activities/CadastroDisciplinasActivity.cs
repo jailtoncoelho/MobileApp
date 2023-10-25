@@ -62,7 +62,7 @@ namespace AndroidApp.Activities
         }
         private void MostrarPage()
         {
-            SetContentView(Resource.Layout.activity_cadastro_usuario);
+            SetContentView(Resource.Layout.activity_cadastro_disciplinas);
         }
     }
 }

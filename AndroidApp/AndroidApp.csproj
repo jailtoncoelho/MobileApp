@@ -29,7 +29,8 @@
     <None Include="Resources\layout\activity_cadastro_disciplinas.xml" />
     <None Include="Resources\layout\activity_cadastro_eventos.xml" />
     <None Include="Resources\layout\activity_cadastro_grupos.xml" />
-    <None Include="Resources\layout\activity_cadastro_turma.xml" />		   
+    <None Include="Resources\layout\activity_cadastro_turma.xml" />
+    <None Include="Resources\layout\activity_cadastro_usuario.xml" />
     <None Include="Resources\layout\activity_login.xml" />
     <None Include="Resources\layout\activity_perfil.xml" />
     <None Include="Resources\layout\activity_perfilUsuario.xml" />
