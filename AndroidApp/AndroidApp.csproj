@@ -9,6 +9,7 @@
 		<ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Resources\layout\activity_turmas.xml" />
 	  <None Remove="Resources\layout\evento_item_view.xml" />
 	  <None Remove="Resources\layout\view_usuarios.xml" />
 	</ItemGroup>
