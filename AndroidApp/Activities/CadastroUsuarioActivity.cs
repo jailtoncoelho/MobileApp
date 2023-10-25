@@ -49,7 +49,7 @@ namespace AndroidApp.Activities
             var confSenhaUser = FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
             var emailUser = FindViewById<EditText>(Resource.Id.editTextEmail);
 
-            if (senhaUser == confSenhaUser)
+            if (senhaUser?.Text == confSenhaUser?.Text)
             {
                 // Crie um objeto com os dados que deseja salvar
                 var dados = new
@@ -74,6 +74,7 @@ namespace AndroidApp.Activities
                     nomeUser.Text = "";
                     senhaUser.Text = "";
                     emailUser.Text = "";
+                    confSenhaUser.Text = "";
 
                     Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
                 }
