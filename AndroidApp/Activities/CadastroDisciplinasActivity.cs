@@ -16,6 +16,7 @@ namespace AndroidApp.Activities
     [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroDisciplinasActivity")]
     internal class CadastroDisciplinasActivity : Activity
     {
+        FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
         /// <summary>
         /// Metodo que chama a tela atraves do Id da Avtivity
         /// </summary>
@@ -26,7 +27,7 @@ namespace AndroidApp.Activities
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_cadastro_disciplinas);
 
-            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnEnviar);
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnCadastrarDisciplina);
             if (btnEnviar != null)
             {
                 // Associe um evento de clique
@@ -38,31 +39,24 @@ namespace AndroidApp.Activities
                 };
             }
         }
-        private void Enviar_Click(object sender, System.EventArgs e)
-        {
-            // O botão foi clicado, execute o código desejado aqui
-            // Por exemplo, exiba uma mensagem
-            CriaNoDisciplinasSeNaoExistirAsync();
-        }
 
         private async Task CriaNoDisciplinasSeNaoExistirAsync()
         {
-            var nomeAluno = FindViewById<EditText>(Resource.Id.edtNomeAluno);
             var nomeDisciplina = FindViewById<EditText>(Resource.Id.edtNomeDisciplina);
+            var nomeProfessor = FindViewById<EditText>(Resource.Id.edtNomeProfessor);
             var dataDisciplina = FindViewById<DatePicker>(Resource.Id.datePickerDataDisciplina);
 
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
-                Nome = nomeAluno?.Text,
                 Disciplina = nomeDisciplina?.Text,
+                Professor = nomeProfessor?.Text,
                 Data = dataDisciplina?.DateTime.ToShortDateString()
             };
 
             // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
-            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
             var result = await firebase
                 .Child("disciplinas")
                 .PostAsync(jsonDados);
@@ -70,8 +64,8 @@ namespace AndroidApp.Activities
             if (result != null)
             {
                 // reinicia valores dos campos da tela
-                nomeAluno.Text = "";
                 nomeDisciplina.Text = "";
+                nomeProfessor.Text = "";
                 dataDisciplina.DateTime = DateTime.Now;
 
                 Toast.MakeText(this, "Disciplina cadastrada com sucesso!", ToastLength.Short)?.Show();
