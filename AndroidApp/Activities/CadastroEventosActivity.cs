@@ -86,6 +86,8 @@ namespace AndroidApp.Activities
                 dataEvento.DateTime = DateTime.Now;                
                
                 Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
+
+                Finish();
             }
             else
             {
