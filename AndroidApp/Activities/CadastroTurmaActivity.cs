@@ -37,8 +37,6 @@ namespace AndroidApp.Activities
                 };
             }
 
-
-
             Button? btnCancelar = FindViewById<Button>(Resource.Id.btnCancelar);
             if (btnCancelar != null)
             {
@@ -47,6 +45,18 @@ namespace AndroidApp.Activities
                 {
                     // O botão foi clicado, execute o código desejado aqui
                     Finish();
+                };
+            }
+
+            Button? btnExibirTurmas = FindViewById<Button>(Resource.Id.btnExibirTurmas);
+            if (btnExibirTurmas != null)
+            {
+                // Associe um evento de clique
+                btnExibirTurmas.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    var intent = new Intent(this, typeof(TurmasActivity));
+                    StartActivity(intent);
                 };
             }
         }
