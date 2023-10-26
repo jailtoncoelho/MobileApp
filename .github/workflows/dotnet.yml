@@ -11,13 +11,18 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest   
+    runs-on: ubuntu-latest
 
-    steps:    
-    - name: Build Android Project
-      run: dotnet build ./AndroidApp/AndroidApp.csproj
-      working-directory: .  # Este é o diretório raiz do repositório
-
-    - name: Test Android Project
-      run: dotnet test ../../AndroidApp.sln
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
 
