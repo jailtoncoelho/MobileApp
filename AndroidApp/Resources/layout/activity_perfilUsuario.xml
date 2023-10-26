@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:gridSpec="1|8|#0093eeff|K:#ee8700ff:16,l:72,l:16,r|S:#83ee00ff:16,0,l:16,56,l:16,0,r">
+
+    <!-- Foto do Perfil -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_account" />
+
+    <!-- Nome do Usuário -->
+    <TextView
+        android:id="@+id/perfil_nomeUser"
+        android:layout_width="match_parent"
+        android:layout_height="33.5dp"
+        android:gravity="center"
+        android:text="@string/perfil_nomeUser"
+        android:textSize="18sp"/>
+
+    <!-- Informações do Perfil -->
+    <TextView
+        android:id="@+id/perfil_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/perfil_info"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="70dp"/>
+
+    <TextView
+        android:id="@+id/perfil_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_email"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Texto do email do aluno -->
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/profileImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100dp"
+        android:hint="ma***6@gmail.com"
+        android:textAlignment="center"
+        android:id="@+id/editText1"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/perfil_dataNascimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_dataNascimento"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+
+    <!-- Texto da data de Nascimento do Aluno-->
+    <EditText
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/profileImage"
+        android:id="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100dp"
+        android:hint="__/__/____"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        />
+
+    <!-- Texto de telefone do Aluno-->
+    <TextView
+        android:id="@+id/perfil_telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_telefone"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Texto de telefone do Aluno-->
+    <EditText
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/profileImage"
+        android:id="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100dp"
+        android:hint="(42)9****-0876"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/perfil_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_pass"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Texto de senha-->
+    <EditText
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/profileImage"
+        android:id="@id/editTextPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100dp"
+        android:hint="********"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:id="@+id/linearLayout1"
+        >
+
+        <!-- Botão de Editar Perfil -->
+        <Button
+            android:id="@+id/editPerfil"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/perfil_btnEditar"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
+        
+        <Button
+            android:id="@+id/cancelEditProfileButton"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:onClick="@android:string/cancel"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/perfil_btnCancelEdit"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
