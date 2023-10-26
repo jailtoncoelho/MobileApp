@@ -25,6 +25,9 @@ jobs:
         
     - name: Restaurar cargas de trabalho do .NET
       run: dotnet workload restore AndroidApp/AndroidApp.csproj
+
+    - name: Android
+      run: android AndroidApp/AndroidApp.csproj
       
     - name: Build
       run: dotnet build AndroidApp.sln
