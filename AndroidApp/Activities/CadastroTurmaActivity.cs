@@ -111,7 +111,7 @@ namespace AndroidApp.Activities
             }
             else
             {
-                Toast.MakeText(this, "A Turma não pôde ser cadastrada!", ToastLength.Short)?.Show();
+                Toast.MakeText(this, "A Turma nao pode ser cadastrada!", ToastLength.Short)?.Show();
             }
 
         }
