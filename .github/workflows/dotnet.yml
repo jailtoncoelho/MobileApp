@@ -18,7 +18,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Configurar ambiente Android
-      run: android AndroidApp/AndroidApp.csproj
+      run: |
+        choco install openjdk11 -y
+        echo "##[set-output name=javaHome]C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot"
+        choco install android-sdk -y
         
     - name: Restaurar cargas de trabalho do .NET
       run: dotnet workload restore AndroidApp/AndroidApp.csproj
