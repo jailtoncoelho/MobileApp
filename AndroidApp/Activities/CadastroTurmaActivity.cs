@@ -31,7 +31,7 @@ namespace AndroidApp.Activities
                 // Associe um evento de clique
                 btnEnviar.Click += (sender, e) =>
                 {
-                    // O botão foi clicado, execute o código desejado aqui
+                    // O botao foi clicado, execute o codigo desejado aqui
                     // Por exemplo, exiba uma mensagem
                     CriaNoEventosSeNaoExistirAsync();
                 };
@@ -54,7 +54,7 @@ namespace AndroidApp.Activities
                 // Associe um evento de clique
                 btnExibirTurmas.Click += (sender, e) =>
                 {
-                    // O botão foi clicado, execute o código desejado aqui
+                    // O botao foi clicado, execute o codigo desejado aqui
                     var intent = new Intent(this, typeof(TurmasActivity));
                     StartActivity(intent);
                 };
