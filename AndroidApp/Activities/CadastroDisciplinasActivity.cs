@@ -36,7 +36,7 @@ namespace AndroidApp.Activities
                 // Associe um evento de clique
                 btnEnviar.Click += (sender, e) =>
                 {
-                    // O botão foi clicado, execute o código desejado aqui
+                    // O botão foi clicado, execute o codigo desejado aqui
                     // Por exemplo, exiba uma mensagem
                     CadastraDisciplinaAsync();
                 };
@@ -74,7 +74,7 @@ namespace AndroidApp.Activities
                 // Associe um evento de clique
                 btnEnviar.Click += (sender, e) =>
                 {
-                    // O botão foi clicado, execute o código desejado aqui
+                    // O botao foi clicado, execute o codigo desejado aqui
                     // Por exemplo, exiba uma mensagem
                     CriaNoDisciplinasSeNaoExistirAsync();
                 };
