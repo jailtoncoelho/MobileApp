@@ -17,10 +17,10 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1.2.x
+    - uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 7.0
+        dotnet-version: '7.0.x'
+        include-prerelease: true
 
     - name: Configurar ambiente Android
       run: |
