@@ -15,7 +15,10 @@ jobs:
 
     steps:
     - name: Checkout do código
-      uses: actions/checkout@v3  
+      uses: actions/checkout@v3
+
+    - name: Configurar ambiente Android
+      run: android AndroidApp/AndroidApp.csproj
         
     - name: Restaurar cargas de trabalho do .NET
       run: dotnet workload restore AndroidApp/AndroidApp.csproj
