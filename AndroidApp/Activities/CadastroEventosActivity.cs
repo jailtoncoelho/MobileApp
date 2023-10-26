@@ -11,6 +11,7 @@ namespace AndroidApp.Activities
     [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroEventosActivity")]
     internal class CadastroEventosActivity : Activity
     {
+        FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
         /// <summary>
         /// Metodo OnCreate é chamado quando a tela é criada e intancia o estado
         /// </summary>
@@ -48,14 +49,6 @@ namespace AndroidApp.Activities
 
         }
 
-        // Manipulador de evento para o clique do botão
-        private void Enviar_Click(object sender, System.EventArgs e)
-        {
-            // O botão foi clicado, execute o código desejado aqui
-            // Por exemplo, exiba uma mensagem
-            CriaNoEventosSeNaoExistirAsync();
-        }
-
         private async Task CriaNoEventosSeNaoExistirAsync()
         {
             var nomeEvento = FindViewById<EditText>(Resource.Id.edtNomeEvento);
@@ -73,7 +66,7 @@ namespace AndroidApp.Activities
             // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
-            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+            
             var result = await firebase
                 .Child("eventos")
                 .PostAsync(jsonDados);
