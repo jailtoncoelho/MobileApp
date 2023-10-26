@@ -42,4 +42,22 @@
 	<string name="perfil_nomeUser">			Nome do usuario</string>
 
 	<string name="ver_grupos">Ver Grupos</string>
+  <string name="perfil_nomeUser">Nome do Usuário</string>
+	<string name="perfil_info">Informações do Perfil</string>
+	<string name="perfil_email">Email</string>
+	<string name="perfil_dataNascimento">Data de Nascimento</string>
+	<string name="perfil_telefone">Telefone</string>
+	<string name="perfil_pass">Senha</string>
+	<string name="perfil_btnEditar">Editar Perfil</string>
+	<string name="perfil_btnCancelEdit">Cancelar</string>
+  
+  <string name="perfil_Senha">Senha</string>
+	<string name="perfil_ConfSenha">Confirmar Senha</string>
+  <string name="perfil_btnConf">Confirmar</string>
+  <string name="perfil_Cadastro">CADASTRO DE USUARIOS</string>
+  <string name="perfil_digiteNomeUser">Digite o nome do usuario</string>
+  <string name="perfil_digiteSenha">Digite a senha</string>
+  <string name="perfil_digiteEmail">Digite o email</string>
+
+  <string name="ver_grupos">Ver Grupos</string>
 </resources>
