@@ -16,7 +16,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-
+    - name: Set Encoding
+      run: |
+        export LANG="pt_BR.UTF-8"
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
