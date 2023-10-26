@@ -5,7 +5,7 @@ name: Build and Test .NET 7 Android Project (Windows)
 
 on:
   push:
-    branches: [ "feature-dev" ]
+    branches: [ "windows-dev" ]
   pull_request:
     branches: [ "master" ]
 
@@ -14,11 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
-    - name: Set Encoding
-      run: |
-        export LANG="pt_BR.UTF-8"
+
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
