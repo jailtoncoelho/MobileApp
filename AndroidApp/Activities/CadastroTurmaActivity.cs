@@ -43,7 +43,7 @@ namespace AndroidApp.Activities
                 // Associe um evento de clique
                 btnCancelar.Click += (sender, e) =>
                 {
-                    // O botão foi clicado, execute o código desejado aqui
+                    // O botao foi clicado, execute o codigo desejado aqui
                     Finish();
                 };
             }
@@ -62,10 +62,10 @@ namespace AndroidApp.Activities
         }
 
 
-        // Manipulador de evento para o clique do botão
+        // Manipulador de evento para o clique do botao
         private void Enviar_Click(object sender, System.EventArgs e)
         {
-            // O botão foi clicado, execute o código desejado aqui
+            // O botao foi clicado, execute o codigo desejado aqui
             // Por exemplo, exiba uma mensagem
             CriaNoEventosSeNaoExistirAsync();
         }
