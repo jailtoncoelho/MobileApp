@@ -15,6 +15,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Configurar ambiente Android
+      run: |
+        choco install openjdk11 -y
+        echo "##[set-output name=javaHome]C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot"
+        choco install android-sdk -y
+        echo "yes" | sdkmanager "platforms;android-30"
+        echo "yes" | sdkmanager "build-tools;30.0.2"
+        echo "export ANDROID_HOME=C:\android-sdk" >> $GITHUB_ENV
+        echo "export PATH=%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\emulator;%ANDROID_HOME%\tools;%ANDROID_HOME%\tools\bin;%ANDROID_HOME%\build-tools\30.0.2;%JAVA_HOME%\bin;%PATH%" >> $GITHUB_ENV
+
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
