@@ -11,11 +11,12 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-latest   
 
     steps:
+    
     - name: Build Android Project
-      run: dotnet build AndroidApp.sln
+      run: dotnet build AndroidApp.csproj
 
     - name: Test Android Project
       run: dotnet test AndroidApp.sln
