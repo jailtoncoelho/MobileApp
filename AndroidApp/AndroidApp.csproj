@@ -35,7 +35,7 @@
     <None Include="Resources\layout\activity_perfil.xml" />
     <None Include="Resources\layout\activity_perfilUsuario.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
-    <None Include="Resources\layout\activity_sobre.xml" />    
+    <None Include="Resources\layout\activity_sobre.xml" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
