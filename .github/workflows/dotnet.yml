@@ -13,13 +13,10 @@ jobs:
   build:
     runs-on: windows-latest   
 
-    steps:
-    - name: Lista arquivos do diretorio
-      run: ls
-    
+    steps:    
     - name: Build Android Project
-      run: dotnet build /**/AndroidApp.sln
+      run: dotnet build ../../AndroidApp.sln
 
     - name: Test Android Project
-      run: dotnet test AndroidApp.sln
+      run: dotnet test ../../AndroidApp.sln
 
