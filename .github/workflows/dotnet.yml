@@ -14,17 +14,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 7.0.x
-
-    - name: Restore NuGet Packages
-      run: dotnet restore AndroidApp.sln
-
     - name: Build Android Project
       run: dotnet build AndroidApp.sln
 
