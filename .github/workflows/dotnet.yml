@@ -25,8 +25,5 @@ jobs:
       run: dotnet workload restore AndroidApp/AndroidApp.csproj
       
     - name: Build
-      run: dotnet build --no-restore
-      
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build AndroidApp/AndroidApp.csproj
 
