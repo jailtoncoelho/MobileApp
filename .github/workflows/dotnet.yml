@@ -18,8 +18,8 @@ jobs:
       run: ls
     
     - name: Build Android Project
-      run: dotnet build
+      run: dotnet build /**/AndroidApp.sln
 
     - name: Test Android Project
-      run: dotnet test
+      run: dotnet test AndroidApp.sln
 
