@@ -3,9 +3,10 @@ using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
+using AndroidLib;
 using static Android.Content.ClipData;
 
-namespace AndroidApp.BaseClasses
+namespace AndroidApp.Adapters
 {
     public class TurmaAdapter : BaseAdapter<Turma>
     {

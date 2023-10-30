@@ -1,6 +1,6 @@
 ﻿
 
-namespace AndroidApp.BaseClasses
+namespace AndroidLib
 {
     public class Turma
     {

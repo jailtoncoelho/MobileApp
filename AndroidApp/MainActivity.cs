@@ -1,7 +1,8 @@
 using Android.Content;
 using Android.Views;
 using AndroidApp.Activities;
-using AndroidApp.BaseClasses;
+using AndroidApp.Adapters;
+using AndroidLib;
 using Firebase;
 using Firebase.Database;
 using Google.Android.Material.BottomNavigation;
@@ -13,7 +14,7 @@ namespace AndroidApp
     {
         private List<Evento> lstEventos;
 
-        
+
 
         protected override void OnCreate(Bundle? savedInstanceState)
         {
@@ -22,7 +23,7 @@ namespace AndroidApp
 
             FirebaseApp.InitializeApp(Application.Context);
 
-            
+
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
@@ -61,12 +62,12 @@ namespace AndroidApp
                   Nome = item.Object.Nome,
                   Descricao = item.Object.Descricao,
                   Data = item.Object.Data
-              }).ToList();            
+              }).ToList();
 
             return eventos;
         }
 
-    
+
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;

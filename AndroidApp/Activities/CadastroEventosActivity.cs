@@ -66,7 +66,9 @@ namespace AndroidApp.Activities
             // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
-            
+          
+
+
             var result = await firebase
                 .Child("eventos")
                 .PostAsync(jsonDados);
