@@ -8,7 +8,7 @@ namespace AndroidAppTest
     [TestFixture]
     public class InsercaoUsuarioTest
     {
-        private FirebaseClient? firebaseClient;
+        private FirebaseClient firebaseClient;
         private const string DatabaseUrl = "https://ifpr-alerts-default-rtdb.firebaseio.com/";
         private const string DataPath = "usuario_teste";
 
@@ -59,9 +59,9 @@ namespace AndroidAppTest
             Assert.IsNotNull(usuario);
 
             // Assert that the retrieved data matches the saved data
-            Assert.AreEqual(Name, (string)usuario.Nome);
-            Assert.AreEqual(Password, (string)usuario.Senha);
-            Assert.AreEqual(Login, (string)usuario.Email);
+            Assert.That((string)usuario.Nome, Is.EqualTo(Name));
+            Assert.That((string)usuario.Senha, Is.EqualTo(Password));
+            Assert.That((string)usuario.Email, Is.EqualTo(Login));
             Assert.Pass();
         }
     }
