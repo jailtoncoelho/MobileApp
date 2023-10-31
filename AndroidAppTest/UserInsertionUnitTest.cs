@@ -19,6 +19,7 @@ namespace AndroidAppTest
         [SetUp]
         public void Setup()
         {
+            // Conecta no firebase
             firebaseClient = new FirebaseClient(DatabaseUrl);
         }
 
