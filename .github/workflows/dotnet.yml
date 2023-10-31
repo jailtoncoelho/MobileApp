@@ -34,3 +34,6 @@ jobs:
     - name: Build
       run: dotnet build AndroidApp/AndroidApp.csproj
 
+    - name: Test
+      run: dotnet test AndroidAppTest/AndroidAppTest.csproj
+
