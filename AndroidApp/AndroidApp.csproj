@@ -12,10 +12,6 @@
     <ProjectReference Include="..\AndroidLib\AndroidLib.csproj" />
   </ItemGroup>
 	<ItemGroup>
-	  <None Remove="Resources\layout\activity_turmas.xml" />
-	  <None Remove="Resources\layout\evento_item_view.xml" />
-	</ItemGroup>
-	<ItemGroup>
 	  <None Include="Resources\drawable\ic_account.xml" />
 	  <None Include="Resources\drawable\ic_events.xml" />
 	  <None Include="Resources\drawable\ic_homepage.xml" />
@@ -39,6 +35,8 @@
     <None Include="Resources\layout\activity_perfilUsuario.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
     <None Include="Resources\layout\activity_sobre.xml" />
+    <None Include="Resources\layout\activity_turmas.xml" />
+    <None Include="Resources\layout\evento_item_view.xml" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
