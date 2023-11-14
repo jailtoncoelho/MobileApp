@@ -11,6 +11,7 @@ namespace AndroidApp.Activities
     [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroEventosActivity")]
     internal class CadastroEventosActivity : Activity
     {
+        FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
         /// <summary>
         /// Metodo OnCreate é chamado quando a tela é criada e intancia o estado
         /// </summary>
@@ -35,36 +36,58 @@ namespace AndroidApp.Activities
                 };
             }
 
-        }
+            Button? btnCancelar = FindViewById<Button>(Resource.Id.btnCancelar);
+            if (btnCancelar != null)
+            {
+                // Associe um evento de clique
+                btnCancelar.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    Finish();
+                };
+            }
 
-        // Manipulador de evento para o clique do botão
-        private void Enviar_Click(object sender, System.EventArgs e)
-        {
-            // O botão foi clicado, execute o código desejado aqui
-            // Por exemplo, exiba uma mensagem
-            CriaNoEventosSeNaoExistirAsync();
         }
 
         private async Task CriaNoEventosSeNaoExistirAsync()
         {
+            var nomeEvento = FindViewById<EditText>(Resource.Id.edtNomeEvento);
+            var descricaoevento = FindViewById<EditText>(Resource.Id.edtDescricaoEvento);
+            var dataEvento = FindViewById<DatePicker>(Resource.Id.datePickerDataEvento);
 
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
-                Nome = "SEPEX",
-                Data = "04/10/2023"
-            };
+                Nome = nomeEvento?.Text,
+                Descricao = descricaoevento?.Text,
+                Data = dataEvento?.DateTime.ToShortDateString()
+            };            
 
             // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
+          
 
 
-            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
-            await firebase
+            var result = await firebase
                 .Child("eventos")
                 .PostAsync(jsonDados);
 
+            if (result != null)
+            {
+                // reinicia valores dos campos da tela
+                nomeEvento.Text = "";
+                descricaoevento.Text = "";
+                dataEvento.DateTime = DateTime.Now;                
+               
+                Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
+
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "O evento não pôde ser cadastrado!", ToastLength.Short)?.Show();
+            }
 
         }
 
@@ -76,4 +99,3 @@ namespace AndroidApp.Activities
 
     }
 }
-

@@ -7,61 +7,117 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Firebase;
+using Firebase.Database;
+using Xamarin.Essentials;
+using FirebaseOptions = Firebase.FirebaseOptions;
+using Newtonsoft.Json;
 
 namespace AndroidApp.Activities
 {
     [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroEventosActivity")]
     internal class CadastroEventosActivity : Activity
     {
-        private EditText nomeAlunoEditText;
-        private EditText nomeDisciplinaEditText;
-        private Button btnCadastrar;
-
+        FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+        /// <summary>
+        /// Metodo que chama a tela atraves do Id da Activity
+        /// </summary>
+        /// <param name="savedInstanceState"></param>
         protected override void OnCreate(Bundle? savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
+            // Set our view from the "main" layout resource
+
+            ///Metodo puxa pagina na main 
+
             MostrarPage();
-
-            nomeAlunoEditText = FindViewById<EditText>(Resource.Id.editTextNomeAluno);
-            nomeDisciplinaEditText = FindViewById<EditText>(Resource.Id.editTextNomeDisciplina);
-            btnCadastrar = FindViewById<Button>(Resource.Id.btnCadastrar);
-
-            if (btnCadastrar != null)
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnConfirm);
+            if (btnEnviar != null)
             {
-                btnCadastrar.Click += (sender, e) =>
+                // Associe um evento de clique
+                btnEnviar.Click += (sender, e) =>
                 {
-                    // Aqui você pode acessar os valores dos campos de entrada
-                    string nomeAluno = nomeAlunoEditText.Text;
-                    string nomeDisciplina = nomeDisciplinaEditText.Text;
+                    // O botão foi clicado, execute o codigo desejado aqui
+                    // Por exemplo, exiba uma mensagem
+                    CadastraDisciplinaAsync();
+                };
+            }
+        }
+        private async Task CadastraDisciplinaAsync()
+        {
 
-                    // Faça algo com nomeAluno e nomeDisciplina, por exemplo, salvá-los no Firebase
-                    CadastrarAlunoDisciplinaAsync(nomeAluno, nomeDisciplina);
+            // Crie um objeto com os dados que deseja salvar
+            var dados = new
+            {
+                Nome = "@+id/textView1",
+                Disciplina = "@+id/textView2"
+            };
+
+            // Converta o objeto para JSON
+            string jsonDados = JsonConvert.SerializeObject(dados);
+
+
+
+            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+            await firebase
+                .Child("disciplinas")
+                .PostAsync(jsonDados);
+
+
+        }
+        private void MostrarPage()
+        {
+            SetContentView(Resource.Layout.activity_cadastro_disciplinas);
+
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnCadastrarDisciplina);
+            if (btnEnviar != null)
+            {
+                // Associe um evento de clique
+                btnEnviar.Click += (sender, e) =>
+                {
+                    // O botao foi clicado, execute o codigo desejado aqui
+                    // Por exemplo, exiba uma mensagem
+                    CriaNoDisciplinasSeNaoExistirAsync();
                 };
             }
         }
 
-        private async Task CadastrarAlunoDisciplinaAsync(string nomeAluno, string nomeDisciplina)
+        private async Task CriaNoDisciplinasSeNaoExistirAsync()
         {
-            // Crie um objeto com os dados que deseja salvar, por exemplo, em JSON
+            var nomeDisciplina = FindViewById<EditText>(Resource.Id.edtNomeDisciplina);
+            var nomeProfessor = FindViewById<EditText>(Resource.Id.edtNomeProfessor);
+            var dataDisciplina = FindViewById<DatePicker>(Resource.Id.datePickerDataDisciplina);
+
+            // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
-                NomeAluno = nomeAluno,
-                NomeDisciplina = nomeDisciplina
+                Disciplina = nomeDisciplina?.Text,
+                Professor = nomeProfessor?.Text,
+                Data = dataDisciplina?.DateTime.ToShortDateString()
             };
 
+            // Converta o objeto para JSON
             string jsonDados = JsonConvert.SerializeObject(dados);
 
-            FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
-            await firebase
-                .Child("aluno_disciplina")
+            var result = await firebase
+                .Child("disciplinas")
                 .PostAsync(jsonDados);
 
-            // Você pode adicionar lógica adicional, como exibir uma mensagem de sucesso
-        }
+            if (result != null)
+            {
+                // reinicia valores dos campos da tela
+                nomeDisciplina.Text = "";
+                nomeProfessor.Text = "";
+                dataDisciplina.DateTime = DateTime.Now;
 
-        private void MostrarPage()
-        {
-            SetContentView(Resource.Layout.activity_cadastro_eventos);
+                Toast.MakeText(this, "Disciplina cadastrada com sucesso!", ToastLength.Short)?.Show();
+            }
+            else
+            {
+                Toast.MakeText(this, "A disciplina não pôde ser cadastrada!", ToastLength.Short)?.Show();
+            }
+
         }
     }
 }

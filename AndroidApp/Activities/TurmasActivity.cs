@@ -1,73 +1,79 @@
 using Android.Content;
 using Android.Views;
+using Android.Widget;
 using AndroidApp.Activities;
 using AndroidApp.Adapters;
 using AndroidLib;
+using AndroidX.AppCompat.View.Menu;
 using Firebase;
 using Firebase.Database;
 using Google.Android.Material.BottomNavigation;
+using Xamarin.Essentials;
+using FirebaseOptions = Firebase.FirebaseOptions;
 
-namespace AndroidApp
+namespace AndroidApp.Activities
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : Activity, BottomNavigationView.IOnNavigationItemSelectedListener
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
+    public class TurmasActivity : Activity, BottomNavigationView.IOnNavigationItemSelectedListener
     {
-        private List<Evento> lstEventos;
-
-
+        private List<Turma> lstTurmas;
 
         protected override void OnCreate(Bundle? savedInstanceState)
         {
 
             base.OnCreate(savedInstanceState);
-
-            FirebaseApp.InitializeApp(Application.Context);
-
-
-
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.activity_turmas);
 
             BottomNavigationView? navigationView = FindViewById<BottomNavigationView>(Resource.Id.bottom_navigation_view);
             navigationView?.SetOnNavigationItemSelectedListener(this);
 
-            showsEventos();
+            showsTurmas();
         }
 
         protected override void OnResume()
         {
             base.OnResume();
-            showsEventos();
+            showsTurmas();
         }
 
-        protected async void showsEventos()
+        protected async void showsTurmas()
         {
-            var allPersons = await GetAllEvents(); ;
-            lstEventos = allPersons;
+            var allPersons = await GetAllTurmas(); ;
+            lstTurmas = allPersons;
 
-            ListView? listView = FindViewById<ListView>(Resource.Id.listViewEventos);
+            ListView? listView = FindViewById<ListView>(Resource.Id.listViewTurmas);
 
-            EventoAdapter adapter = new EventoAdapter(this, lstEventos);
+            TurmaAdapter adapter = new TurmaAdapter(this, lstTurmas);
             listView.Adapter = adapter;
         }
 
-        public async Task<List<Evento>> GetAllEvents()
+        public async Task<List<Turma>> GetAllTurmas()
         {
             FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
 
-            var eventos = (await firebase
-              .Child("eventos")
-              .OnceAsync<Evento>()).Select(item => new Evento
+            var turmas = (await firebase
+              .Child("turmas")
+              .OnceAsync<Turma>()).Select(item => new Turma
               {
-                  Nome = item.Object.Nome,
+                  /*Nome = item.Object.Nome,
                   Descricao = item.Object.Descricao,
                   Data = item.Object.Data
+                  */
+                  NomeTurma = item.Object.NomeTurma,
+                  Curso = item.Object.Curso,
+                  AnoDeInicio = item.Object.AnoDeInicio,
+                  Campus = item.Object.Campus,
+                  NumeroDeAlunos = item.Object.NumeroDeAlunos,
+                  AnoPrevisaoFormatura = item.Object.AnoPrevisaoFormatura
               }).ToList();
 
-            return eventos;
+            
+
+            return turmas;
         }
 
-
+    
         public bool OnNavigationItemSelected(IMenuItem item)
         {
             int id = item.ItemId;

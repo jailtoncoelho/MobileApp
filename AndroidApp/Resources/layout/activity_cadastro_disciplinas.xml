@@ -6,32 +6,68 @@
     android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
     android:id="@+id/linearLayout1">
+
     <TextView
-        android:text="Digite seu nome"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="editTextNomeAluno" />
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="IFPR Alerts - Disciplinas"
+        android:id="@+id/txtLabel"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
     <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
         android:text="Digite o nome da disciplina"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginTop="20dp"
+        android:id="@+id/txtNomeAluno" />
+    <EditText
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:gravity="left"  
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:id="@+id/edtNomeDisciplina" />
+    <TextView
+        android:layout_marginLeft="25.0dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Digite o nome da professor (a)"
+        android:id="@+id/txtNomeProfessor" />
+    <EditText
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="left"  
+        android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
-    <AutoCompleteTextView
+        android:layout_marginRight="20dp"
+        android:id="@+id/edtNomeProfessor" />
+
+    <TextView
+        android:text="Selecione a data de início do período da disciplina"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="editTextNomeDisciplina" />
+        android:id="@+id/txtDataDisciplina" />
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:id="@+id/datePickerDataDisciplina" />
+
     <Button
         android:text="Cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="btnCadastrar" />
+        android:id="@+id/btnCadastrarDisciplina" />
     <GridView
         android:minWidth="25px"
         android:minHeight="25px"

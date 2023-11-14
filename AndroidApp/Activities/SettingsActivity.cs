@@ -41,7 +41,7 @@ namespace AndroidApp.Activities
             {
                 buttonCadastroAluno.Click += delegate
                 {
-                    var intent = new Intent(this, typeof(CadastroAlunosActivity));
+                    var intent = new Intent(this, typeof(CadastroUsuarioActivity));
                     StartActivity(intent);
                 };
             }
