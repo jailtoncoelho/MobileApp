@@ -19,7 +19,30 @@ namespace AndroidApp.Activities
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_cadastro_turma);            
+            SetContentView(Resource.Layout.activity_cadastro_turma);
+
+            CadastroTurma();
+
+            Button? btnEnviar = FindViewById<Button>(Resource.Id.btnEnviar);
+            if (btnEnviar != null)
+            {
+                // Associe um evento de clique
+                btnEnviar.Click += (sender, e) =>
+                {
+                    // O botão foi clicado, execute o código desejado aqui
+                    // Por exemplo, exiba uma mensagem
+                    CriaNoTurmaSeNaoExistirAsync();
+                };
+            }
+
         }
+        // Manipulador de evento para o clique do botão
+        private void Enviar_Click(object sender, System.EventArgs e)
+        {
+            // O botão foi clicado, execute o código desejado aqui
+            // Por exemplo, exiba uma mensagem
+            CriaNoEventosSeNaoExistirAsync();
+        }
+
     }
 }
