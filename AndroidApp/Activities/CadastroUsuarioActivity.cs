@@ -1,9 +1,5 @@
-﻿using Android.Content;
-using Firebase.Database;
-using Firebase.Database.Core.View;
+﻿using Firebase.Database;
 using Newtonsoft.Json;
-using Firebase;
-using Google.Android.Material.BottomNavigation;
 
 
 namespace AndroidApp.Activities
@@ -59,28 +55,37 @@ namespace AndroidApp.Activities
                     Email = emailUser?.Text,
                 };
 
-                // Converta o objeto para JSON
-                string jsonDados = JsonConvert.SerializeObject(dados);
-
-
-                FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
-                var result = await firebase
-                    .Child("usuarios")
-                    .PostAsync(jsonDados);
-
-                if (result != null)
+                try
                 {
-                    // reinicia valores dos campos da tela
-                    nomeUser.Text = "";
-                    senhaUser.Text = "";
-                    emailUser.Text = "";
-                    confSenhaUser.Text = "";
+                    string jsonDados = JsonConvert.SerializeObject(dados);
 
-                    Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
+                    FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
+                    var result = await firebase
+                        .Child("usuarios")
+                        .PostAsync(jsonDados);
+
+                    if (result != null)
+                    {
+                        // reinicia valores dos campos da tela
+                        nomeUser.Text = "";
+                        senhaUser.Text = "";
+                        emailUser.Text = "";
+                        confSenhaUser.Text = "";
+
+                        Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "O usuário não pôde ser cadastrado!", ToastLength.Short)?.Show();
+                    }
+
+                    Toast.MakeText(this, "Usuário logado com sucesso!", ToastLength.Short)?.Show();
+
+                    Finish();
                 }
-                else
+                catch (Exception e)
                 {
-                    Toast.MakeText(this, "O usuário não pôde ser cadastrado!", ToastLength.Short)?.Show();
+                    Console.WriteLine($"Erro: {e.Message}");
                 }
             }
             else
@@ -94,6 +99,4 @@ namespace AndroidApp.Activities
             SetContentView(Resource.Layout.activity_cadastro_usuario);
         }
     }
-
-
 }

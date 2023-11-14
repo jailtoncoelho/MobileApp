@@ -8,9 +8,12 @@
 		<ApplicationVersion>4</ApplicationVersion>
 		<ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
 	</PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AndroidLib\AndroidLib.csproj" />
+  </ItemGroup>
 	<ItemGroup>
+	  <None Remove="Resources\layout\activity_turmas.xml" />
 	  <None Remove="Resources\layout\evento_item_view.xml" />
-	  <None Remove="Resources\layout\view_usuarios.xml" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Include="Resources\drawable\ic_account.xml" />
@@ -35,11 +38,11 @@
     <None Include="Resources\layout\activity_perfil.xml" />
     <None Include="Resources\layout\activity_perfilUsuario.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
-    <None Include="Resources\layout\activity_sobre.xml" />    
+    <None Include="Resources\layout\activity_sobre.xml" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
 		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
 		<PackageReference Include="Xamarin.Firebase.Common" Version="120.3.3.1" />

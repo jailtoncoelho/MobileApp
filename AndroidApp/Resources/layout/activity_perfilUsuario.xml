@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:gridSpec="1|8|#0093eeff|K:#ee8700ff:16,l:72,l:16,r|S:#83ee00ff:16,0,l:16,56,l:16,0,r">
 
     <!-- Foto do Perfil -->
     <ImageView
@@ -52,7 +54,7 @@
         android:layout_toLeftOf="@id/profileImage"
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="100dp"
-        android:hint="mar***6@gmail.com"
+        android:hint="ma***6@gmail.com"
         android:textAlignment="center"
         android:id="@+id/editText1"
         android:textSize="20sp"/>
@@ -68,7 +70,7 @@
         android:layout_gravity="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"/>
-    
+
 
     <!-- Texto da data de Nascimento do Aluno-->
     <EditText
@@ -137,7 +139,7 @@
         android:textSize="20sp"
         />
 
-    
+
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"
@@ -151,24 +153,24 @@
 
         <!-- Botão de Editar Perfil -->
         <Button
-        android:id="@+id/editProfileButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
-        android:layout_marginHorizontal="20dp"
-        android:text="@string/perfil_btnEditar" />
-
+            android:id="@+id/editPerfil"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/perfil_btnEditar"
+            android:backgroundTint="@android:color/holo_blue_bright"/>
+        
         <Button
-        android:id="@+id/cancelEditProfileButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
-        android:onClick="@android:string/cancel"
-        android:layout_marginHorizontal="20dp"
-        android:backgroundTint="@android:color/holo_red_light"
-        android:text="@string/perfil_btnCancelEdit"/>
-        
-      
-    </LinearLayout> 
-        
-     
+            android:id="@+id/cancelEditProfileButton"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="@dimen/buttonHeight"
+            android:onClick="@android:string/cancel"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/perfil_btnCancelEdit"
+            android:visibility="invisible"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
