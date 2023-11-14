@@ -16,7 +16,7 @@
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView1" />
+        android:id="editTextNomeAluno" />
     <TextView
         android:text="Digite o nome da disciplina"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -26,12 +26,12 @@
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/autoCompleteTextView2" />
+        android:id="editTextNomeDisciplina" />
     <Button
         android:text="Cadastrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="btnCadastrar" />
     <GridView
         android:minWidth="25px"
         android:minHeight="25px"
