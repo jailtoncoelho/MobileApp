@@ -54,7 +54,7 @@ namespace AndroidAppTest
                 Campus = Campus,
                 NumeroDeAlunos = NumeroDeAlunos,
                 AnoPrevisaoFormatura = AnoPrevisaoFormatura
-    };
+            };
 
             string jsonDados = JsonConvert.SerializeObject(dataToSave);
 
