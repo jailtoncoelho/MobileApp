@@ -15,8 +15,8 @@ using Newtonsoft.Json;
 
 namespace AndroidApp.Activities
 {
-    [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroEventosActivity")]
-    internal class CadastroEventosActivity : Activity
+    [Activity(Name = "com.ifpr_telemacoborba.alerts.CadastroDisciplinasActivity")]
+    internal class CadastroDisciplinasActivity : Activity
     {
         FirebaseClient firebase = new FirebaseClient("https://ifpr-alerts-default-rtdb.firebaseio.com/");
         /// <summary>
