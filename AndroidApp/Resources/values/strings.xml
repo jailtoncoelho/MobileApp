@@ -21,6 +21,7 @@
   <string name="evento_descricao">Descrição do Evento</string>
   <string name="evento_grupo">Responsável</string>
   <string name="evento_responsavel">Grupos</string>
+  <string name="cadastro_evento_responsavel">Responsável pelo Evento</string>
   <string name="evento_data">Data de Início</string>
   <string name="evento_cancelar">CANCELAR</string>
   <string name="evento_enviar">ENVIAR</string>
