@@ -119,5 +119,6 @@ namespace AndroidApp.Activities
         {
             SetContentView(Resource.Layout.activity_cadastro_turma);
         }
+
     }
 }

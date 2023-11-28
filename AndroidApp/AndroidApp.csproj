@@ -5,8 +5,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-		<ApplicationVersion>4</ApplicationVersion>
-		<ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
+		<ApplicationVersion>5</ApplicationVersion>
+		<ApplicationDisplayVersion>5.0</ApplicationDisplayVersion>
 	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndroidLib\AndroidLib.csproj" />
