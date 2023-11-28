@@ -88,6 +88,21 @@
         android:layout_marginTop="8dp"
         android:hint="@string/perfil_digiteEmail"/>
 
+    <TextView
+        android:id="@+id/textViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_dataNascimento"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewData"
+        android:layout_marginTop="8dp"
+        android:hint="@string/perfil_digiteDataNascimento"/>
+
 	<Button
         android:id="@+id/btnConfirm"
         android:layout_width="wrap_content"
