@@ -15,7 +15,7 @@ namespace AndroidAppTest
         private const string Name = "Lionel Messi";
         private const string Login = "messi@gmail.com";
         private const string Password = "E#5|£A2xu0sw";
-        private const string DataNasc = "00/00/0000";
+        private const string DataNascimento = "00/00/0000";
 
         [SetUp]
         public void Setup()
@@ -40,7 +40,7 @@ namespace AndroidAppTest
                 Nome = Name,
                 Email = Login,
                 Senha = Password,
-                DataNasc = DataNasc
+                DataNasc = DataNascimento
             };
 
             string jsonDados = JsonConvert.SerializeObject(dataToSave);
@@ -66,7 +66,7 @@ namespace AndroidAppTest
             Assert.That((string)usuario.Nome, Is.EqualTo(Name));
             Assert.That((string)usuario.Senha, Is.EqualTo(Password));
             Assert.That((string)usuario.Email, Is.EqualTo(Login));
-            Assert.That((string)usuario.DataNasc, Is.EqualTo(DataNasc));
+            Assert.That((string)usuario.DataNasc, Is.EqualTo(DataNascimento));
             Assert.Pass();
         }
     }
