@@ -44,6 +44,7 @@ namespace AndroidApp.Activities
             var senhaUser = FindViewById<EditText>(Resource.Id.editTextPassword);
             var confSenhaUser = FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
             var emailUser = FindViewById<EditText>(Resource.Id.editTextEmail);
+            var CPFUser = FindViewById<EditText>(Resource.Id.editTextCPF);
 
             if (senhaUser?.Text == confSenhaUser?.Text)
             {
@@ -53,6 +54,7 @@ namespace AndroidApp.Activities
                     Nome = nomeUser?.Text,
                     Senha = senhaUser?.Text,
                     Email = emailUser?.Text,
+                    CPF = CPFUser?.Text,
                 };
 
                 try
@@ -71,6 +73,7 @@ namespace AndroidApp.Activities
                         senhaUser.Text = "";
                         emailUser.Text = "";
                         confSenhaUser.Text = "";
+                        CPFUser.Text = "";
 
                         Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
                     }
