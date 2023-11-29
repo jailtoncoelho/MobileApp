@@ -44,7 +44,7 @@ namespace AndroidApp.Activities
             var senhaUser = FindViewById<EditText>(Resource.Id.editTextPassword);
             var confSenhaUser = FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
             var emailUser = FindViewById<EditText>(Resource.Id.editTextEmail);
-            var telefoneUser = FindViewById<EditText>(Resource.Id.editTextPhone);
+            var telefoneUser = FindViewById<EditText>(Resource.Id.editTextTelefone);
 
             if (senhaUser?.Text == confSenhaUser?.Text)
             {

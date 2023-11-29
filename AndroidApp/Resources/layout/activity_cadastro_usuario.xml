@@ -96,10 +96,10 @@
         android:layout_marginTop="16dp"/>
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextTelefone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editViewEmail"
+        android:layout_below="@+id/editViewTelefone"
         android:layout_marginTop="8dp"
         android:hint="@string/perfil_digiteTelefone"/>
 	
