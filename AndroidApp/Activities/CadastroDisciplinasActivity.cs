@@ -51,7 +51,7 @@ namespace AndroidApp.Activities
             var dados = new
             {
                 Nome = "@+id/textView1",
-                Disciplina = "@+id/textView2",
+                Descricao = "@+id/textView2",
                 Nascimento = "@+id/textView3"
             };
 
@@ -88,7 +88,7 @@ namespace AndroidApp.Activities
         {
             var nomeDisciplina = FindViewById<EditText>(Resource.Id.edtNomeDisciplina);
             var nomeProfessor = FindViewById<EditText>(Resource.Id.edtNomeProfessor);
-            var dataDisciplina = FindViewById<DatePicker>(Resource.Id.datePickerDataDisciplina);
+            var Descricao = FindViewById<DatePicker>(Resource.Id.datePickerDataDisciplina);
             var dataNasc = FindViewById<DatePicker>(Resource.Id.datePickerDataNasc);
 
             // Crie um objeto com os dados que deseja salvar
@@ -96,7 +96,7 @@ namespace AndroidApp.Activities
             {
                 Disciplina = nomeDisciplina?.Text,
                 Professor = nomeProfessor?.Text,
-                Data = dataDisciplina?.DateTime.ToShortDateString(),
+                Data = Descricao?.DateTime.ToShortDateString(),
                 Nascimento = dataNasc?.DateTime.ToShortDateString(),
             };
 
@@ -112,7 +112,7 @@ namespace AndroidApp.Activities
                 // reinicia valores dos campos da tela
                 nomeDisciplina.Text = "";
                 nomeProfessor.Text = "";
-                dataDisciplina.DateTime = DateTime.Now;
+                Descricao.DateTime = DateTime.Now;
                 dataNasc.DateTime = DateTime.Now;
 
                 Toast.MakeText(this, "Disciplina cadastrada com sucesso!", ToastLength.Short)?.Show();
