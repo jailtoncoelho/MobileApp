@@ -50,4 +50,5 @@
   <string name="perfil_digiteNomeUser">Digite o nome do usuario</string>
   <string name="perfil_digiteSenha">Digite a senha</string>
   <string name="perfil_digiteEmail">Digite o email</string>
+  <string name="perfil_digiteTelefone">Difite o Telefone</string>
 </resources>
