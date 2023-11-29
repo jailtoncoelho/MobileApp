@@ -44,6 +44,7 @@ namespace AndroidApp.Activities
             var senhaUser = FindViewById<EditText>(Resource.Id.editTextPassword);
             var confSenhaUser = FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
             var emailUser = FindViewById<EditText>(Resource.Id.editTextEmail);
+            var campusUser = FindViewById<EditText>(Resource.Id.editTextCampus);
 
             if (senhaUser?.Text == confSenhaUser?.Text)
             {
@@ -53,6 +54,7 @@ namespace AndroidApp.Activities
                     Nome = nomeUser?.Text,
                     Senha = senhaUser?.Text,
                     Email = emailUser?.Text,
+                    Campus = campusUser?.Text,
                 };
 
                 try
@@ -69,6 +71,7 @@ namespace AndroidApp.Activities
                         // reinicia valores dos campos da tela
                         nomeUser.Text = "";
                         senhaUser.Text = "";
+                        campusUser.Text = "";
                         emailUser.Text = "";
                         confSenhaUser.Text = "";
 

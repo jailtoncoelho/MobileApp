@@ -114,6 +114,30 @@
         />
 
     <TextView
+        android:id="@+id/perfil_Campus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_Campus"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Texto Campus -->
+    <EditText
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/profileImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="100dp"
+        android:hint="Telemaco Borba"
+        android:textAlignment="center"
+        android:id="@+id/editTextCampus"
+        android:textSize="20sp"/>
+
+    <TextView
         android:id="@+id/perfil_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -12,8 +12,9 @@ namespace AndroidAppTest
         private const string DatabaseUrl = "https://ifpr-alerts-default-rtdb.firebaseio.com/";
         private const string DataPath = "usuario_teste";
 
-        private const string Name = "Lionel Messi";
-        private const string Login = "messi@gmail.com";
+        private const string Name = "Guilherme Gonçalves";
+        private const string Login = "meuemail@gmail.com";
+        private const string Campuss = "Telemaco Borba";
         private const string Password = "E#5|£A2xu0sw";
 
         [SetUp]
@@ -38,7 +39,9 @@ namespace AndroidAppTest
             {
                 Nome = Name,
                 Email = Login,
-                Senha = Password
+                Campus = Campuss,
+                Senha = Password,
+                
             };
 
             string jsonDados = JsonConvert.SerializeObject(dataToSave);
@@ -54,6 +57,7 @@ namespace AndroidAppTest
               {
                   Nome = item.Object.Nome,
                   Email = item.Object.Email,
+                  Campus = item.Object.Campus,
                   Senha = item.Object.Senha
               }).Where(item => item.Email == Login && item.Senha == Password).FirstOrDefault();
 
@@ -62,6 +66,7 @@ namespace AndroidAppTest
             // Assert that the retrieved data matches the saved data
             Assert.That((string)usuario.Nome, Is.EqualTo(Name));
             Assert.That((string)usuario.Senha, Is.EqualTo(Password));
+            Assert.That((string)usuario.Campus, Is.EqualTo(Campuss));
             Assert.That((string)usuario.Email, Is.EqualTo(Login));
             Assert.Pass();
         }
