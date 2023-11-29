@@ -20,7 +20,7 @@ namespace AndroidAppTest
         private const string DescricaoEvento = "Hallowen";
         private const string NomeEvento = "Hallowen";
         private const string DataEvento = "06/11/2023";
-
+        private const string Observacao = "Comparecer Fantasiado para participar da premiação";
         [SetUp]
         public void Setup()
         {
@@ -37,6 +37,7 @@ namespace AndroidAppTest
                 Nome = NomeEvento,
                 Descricao = DescricaoEvento,
                 Data = DataEvento,
+                EventoObs = Observacao
             };
 
             string jsonDados = JsonConvert.SerializeObject(dataSave);
@@ -53,15 +54,16 @@ namespace AndroidAppTest
                   Nome = item.Object.Nome,
                   Descricao = item.Object.Descricao,
                   Data = item.Object.Data,
+                  Observacoes = item.Object.Observacoes,
 
-              }).Where(item => item.Nome == NomeEvento && item.Descricao == DescricaoEvento).FirstOrDefault();
+              }).Where(item => item.Nome == NomeEvento && item.Descricao == DescricaoEvento && item.Observacoes == Observacao).FirstOrDefault();
 
             Assert.IsNotNull(evento);
 
             Assert.That((string)evento.Nome, Is.EqualTo(NomeEvento));
             Assert.That((string)evento.Descricao, Is.EqualTo(DescricaoEvento));
             Assert.That((string)evento.Data, Is.EqualTo(DataEvento));
-
+            Assert.That((string)evento.Observacoes, Is.EqualTo(Observacao));
         }
 
 
