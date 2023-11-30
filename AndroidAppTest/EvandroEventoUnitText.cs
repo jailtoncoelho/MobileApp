@@ -37,7 +37,7 @@ namespace AndroidAppTest
                 Nome = NomeEvento,
                 Descricao = DescricaoEvento,
                 Data = DataEvento,
-                EventoObs = Observacao
+                Observacoes = Observacao
             };
 
             string jsonDados = JsonConvert.SerializeObject(dataSave);
