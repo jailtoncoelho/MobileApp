@@ -1,4 +1,4 @@
-<resources>  
+<resources> 
 	<string name="app_name">IFPR Alerts</string>
 	<string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
 	<string name="app_cadastro_turma">"Cadastro de Turma"</string>
@@ -42,6 +42,7 @@
 	<string name="perfil_pass">Senha</string>
 	<string name="perfil_btnEditar">Editar Perfil</string>
 	<string name="perfil_btnCancelEdit">Cancelar</string>
+  <string name="perfil_Campus">Digite o Campus</string>
 
 	<string name="perfil_Senha">Senha</string>
 	<string name="perfil_ConfSenha">Confirmar Senha</string>

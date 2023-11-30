@@ -11,12 +11,15 @@ namespace AndroidAppTest
         private FirebaseClient firebaseClient;
         private const string DatabaseUrl = "https://ifpr-alerts-default-rtdb.firebaseio.com/";
         private const string DataPath = "usuario_teste";
-
+      
+     
+        private const string Campuss = "Telemaco Borba";
         private const string Name = "Lionel Messi";
         private const string Login = "messi@gmail.com";
         private const string Password = "E#5|£A2xu0sw";
         private const string CPF = "654.321.123-01";
         private const string Phone = "53 99124-3455";
+
 
         [SetUp]
         public void Setup()
@@ -40,6 +43,7 @@ namespace AndroidAppTest
             {
                 Nome = Name,
                 Email = Login,
+                Campus = Campuss,
                 Senha = Password,
                 Cpf = CPF,
                 Telefone = Phone
@@ -58,9 +62,10 @@ namespace AndroidAppTest
               {
                   Nome = item.Object.Nome,
                   Email = item.Object.Email,
+                  Campus = item.Object.Campus,
                   Senha = item.Object.Senha,
                   Telefone = item.Object.Telefone,
-                  CPF = item.Object.CPF
+                  CPF = item.Object.CPF                  
               }).Where(item => item.Email == Login && item.Senha == Password && item.CPF == CPF).FirstOrDefault();                  
 
             Assert.IsNotNull(usuario);
@@ -68,6 +73,7 @@ namespace AndroidAppTest
             // Assert that the retrieved data matches the saved data
             Assert.That((string)usuario.Nome, Is.EqualTo(Name));
             Assert.That((string)usuario.Senha, Is.EqualTo(Password));
+            Assert.That((string)usuario.Campus, Is.EqualTo(Campuss));
             Assert.That((string)usuario.Email, Is.EqualTo(Login));
             Assert.That((string)usuario.CPF, Is.EqualTo(CPF));
             Assert.That((string)usuario.Telefone, Is.EqualTo(Phone));
