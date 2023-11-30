@@ -1,5 +1,4 @@
 <resources>
-
 	<string name="app_name">IFPR Alerts</string>
 	<string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
 	<string name="app_cadastro_turma">"Cadastro de Turma"</string>
@@ -50,6 +49,7 @@
 	<string name="perfil_digiteNomeUser">Digite o nome do usuario</string>
 	<string name="perfil_digiteSenha">Digite a senha</string>
 	<string name="perfil_digiteEmail">Digite o email</string>
+  <string name="perfil_digiteTelefone">Difite o Telefone</string>
 	<string name="cadUser">Selecione o tipo de usuario:</string>
 
 	<string-array name="user_types">
