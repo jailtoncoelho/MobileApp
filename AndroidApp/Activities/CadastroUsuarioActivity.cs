@@ -1,6 +1,6 @@
 ﻿using Firebase.Database;
 using Newtonsoft.Json;
-
+using Xamarin.Kotlin;
 
 namespace AndroidApp.Activities
 {
@@ -44,7 +44,11 @@ namespace AndroidApp.Activities
             var senhaUser = FindViewById<EditText>(Resource.Id.editTextPassword);
             var confSenhaUser = FindViewById<EditText>(Resource.Id.editTextConfirmPassword);
             var emailUser = FindViewById<EditText>(Resource.Id.editTextEmail);
-
+            var campusUser = FindViewById<EditText>(Resource.Id.editTextCampus);
+            var CPFUser = FindViewById<EditText>(Resource.Id.editTextCPF);
+            var telefoneUser = FindViewById<EditText>(Resource.Id.editTextTelefone);
+            var tpUser = FindViewById<EditText>(Resource.Id.userTypeSpinner);
+            
             if (senhaUser?.Text == confSenhaUser?.Text)
             {
                 // Crie um objeto com os dados que deseja salvar
@@ -53,6 +57,10 @@ namespace AndroidApp.Activities
                     Nome = nomeUser?.Text,
                     Senha = senhaUser?.Text,
                     Email = emailUser?.Text,
+                    Campus = campusUser?.Text,
+                    CPF = CPFUser?.Text,
+                    Telefone = telefoneUser?.Text,
+                    Tipo_User = tpUser?.Text
                 };
 
                 try
@@ -69,8 +77,12 @@ namespace AndroidApp.Activities
                         // reinicia valores dos campos da tela
                         nomeUser.Text = "";
                         senhaUser.Text = "";
+                        campusUser.Text = "";
                         emailUser.Text = "";
                         confSenhaUser.Text = "";
+                        CPFUser.Text = "";
+                        telefoneUser.Text = "";
+                        tpUser.Text = "";
 
                         Toast.MakeText(this, "Usuário cadastrado com sucesso!", ToastLength.Short)?.Show();
                     }
