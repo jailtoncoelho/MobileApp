@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Firebase;
 using Firebase.Database;
-using Xamarin.Essentials;
 using FirebaseOptions = Firebase.FirebaseOptions;
 using Newtonsoft.Json;
 

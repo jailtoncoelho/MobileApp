@@ -8,7 +8,6 @@ using AndroidX.AppCompat.View.Menu;
 using Firebase;
 using Firebase.Database;
 using Google.Android.Material.BottomNavigation;
-using Xamarin.Essentials;
 using FirebaseOptions = Firebase.FirebaseOptions;
 
 namespace AndroidApp.Activities

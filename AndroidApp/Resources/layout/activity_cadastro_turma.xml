@@ -68,4 +68,28 @@
         android:inputType="text"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="38.5dp" />
+
+    <Button
+        android:text="Cancelar"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:id="@+id/btnCancelar"
+        android:layout_marginRight="0.0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center" />
+    <Button
+        android:text="Enviar"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:id="@+id/btnEnviar"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center" />
+    <Button
+        android:text="Exibir Turmas"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:id="@+id/btnExibirTurmas"
+        android:layout_below="@id/btnEnviar"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center" />
 </RelativeLayout>
