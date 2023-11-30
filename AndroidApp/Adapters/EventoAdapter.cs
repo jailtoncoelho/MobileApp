@@ -1,10 +1,7 @@
-using Android.App;
 using Android.Content;
-using Android.OS;
 using Android.Views;
 using Android.Widget;
 using AndroidLib;
-using static Android.Content.ClipData;
 
 namespace AndroidApp.Adapters
 {
@@ -25,9 +22,9 @@ namespace AndroidApp.Adapters
 
         public override long GetItemId(int position) => position;
 
-        public override View GetView(int position, View convertView, ViewGroup parent)
+        public override Android.Views.View GetView(int position, Android.Views.View convertView, ViewGroup parent)
         {
-            View view = convertView;
+            Android.Views.View view = convertView;
             Evento evento = items[position];
 
             if (view == null)
