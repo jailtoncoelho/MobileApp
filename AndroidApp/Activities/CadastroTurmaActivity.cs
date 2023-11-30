@@ -78,6 +78,7 @@ namespace AndroidApp.Activities
             var campusTurma = FindViewById<EditText>(Resource.Id.edtCampusDaTurma);
             var numeroDeAlunos = FindViewById<EditText>(Resource.Id.edtNumeroDeAlunos);
             var previsãoFormatura = FindViewById<EditText>(Resource.Id.edtAnoFormatura);
+            var mascoteTurma = FindViewById<EditText>(Resource.Id.edtMascoteTurma);
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
@@ -86,7 +87,8 @@ namespace AndroidApp.Activities
                 AnoDeInicio = anoIngresso?.Text,
                 Campus = campusTurma?.Text,
                 NumeroDeAlunos = numeroDeAlunos?.Text,
-                AnoPrevisaoFormatura = previsãoFormatura?.Text
+                AnoPrevisaoFormatura = previsãoFormatura?.Text,
+                MascoteTurma = mascoteTurma ?.Text
             };
 
             // Converta o objeto para JSON
