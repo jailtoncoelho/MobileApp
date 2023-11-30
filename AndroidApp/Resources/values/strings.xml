@@ -1,54 +1,61 @@
 <resources>
+	<string name="app_name">IFPR Alerts</string>
+	<string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
+	<string name="app_cadastro_turma">"Cadastro de Turma"</string>
+	<string name="app_sobre">"Sobre"</string>
+	<string name="app_sobre_description">"Este aplicativo está sendo meticulosamente desenvolvido pela turma de TADS 5 do Instituto Federal de Telêmaco Borba. Nosso objetivo primordial é proporcionar uma experiência de aprendizado excepcional, e contamos com a valiosa orientação do Dr. Jailton Júnior De Sousa Coelho.</string>
+	<string name="app_no_text">""</string>
 
-  <string name="app_name">IFPR Alerts</string>
-  <string name="app_text">Olá! Eu sou o App desenvolvido pela turma de TADS 5 do IFPR - Campus Telêmaco Borba</string>
-  <string name="app_cadastro_turma">"Cadastro de Turma"</string>
-  <string name="app_sobre">"Sobre"</string>
-  <string name="app_sobre_description">"Este aplicativo está sendo meticulosamente desenvolvido pela turma de TADS 5 do Instituto Federal de Telêmaco Borba. Nosso objetivo primordial é proporcionar uma experiência de aprendizado excepcional, e contamos com a valiosa orientação do Dr. Jailton Júnior De Sousa Coelho.</string>
-  <string name="app_no_text">""</string>
+	<string name="app_menu_home">"Home"</string>
+	<string name="app_menu_events">"Eventos"</string>
+	<string name="app_menu_account">"Perfil"</string>
+	<string name="app_menu_settings">"Settings"</string>
 
-  <string name="app_menu_home">"Home"</string>
-  <string name="app_menu_events">"Eventos"</string>
-  <string name="app_menu_account">"Perfil"</string>
-  <string name="app_menu_settings">"Settings"</string>
+	<string name="cadastro_turma">Cadastro de Turmas</string>
+	<string name="cadastro_aluno">Cadastro de Alunos</string>
+	<string name="cadastro_disciplina">Cadastro de Disciplinas</string>
+	<string name="cadastro_grupo">Cadastro de Grupos</string>
 
-  <string name="cadastro_turma">Cadastro de Turmas</string>
-  <string name="cadastro_aluno">Cadastro de Alunos</string>
-  <string name="cadastro_disciplina">Cadastro de Disciplinas</string>
-  <string name="cadastro_grupo">Cadastro de Grupos</string>
+	<string name="evento_nome">Nome do Evento</string>
+	<string name="evento_descricao">Descrição do Evento</string>
+	<string name="evento_grupo">Responsável</string>
+	<string name="evento_responsavel">Grupos</string>
+	<string name="evento_data">Data de Início</string>
+	<string name="evento_cancelar">CANCELAR</string>
+	<string name="evento_enviar">ENVIAR</string>
+	<string name="evento_TADS">TADS</string>
+	<string name="evento_ENGEL">ENGEL</string>
+	<string name="evento_AUTOMAÇÃO">AUTOMAÇÃO</string>
 
-  <string name="evento_nome">Nome do Evento</string>
-  <string name="evento_descricao">Descrição do Evento</string>
-  <string name="evento_grupo">Responsável</string>
-  <string name="evento_responsavel">Grupos</string>
-  <string name="evento_data">Data de Início</string>
-  <string name="evento_cancelar">CANCELAR</string>
-  <string name="evento_enviar">ENVIAR</string>
-  <string name="evento_TADS">TADS</string>
-  <string name="evento_ENGEL">ENGEL</string>
-  <string name="evento_AUTOMAÇÃO">AUTOMAÇÃO</string>
+	<string name="ver_turma">Ver Turma</string>
 
-  <string name="ver_turma">Ver Turma</string>
+	<string name="perfil_bemVindo">			Bem Vindo, </string>
+	<string name="perfil_btnSalvar">		Salvar</string>
 
-  <string name="perfil_bemVindo">			Bem Vindo, </string>
-  <string name="perfil_btnSalvar">		Salvar</string>
+	<string name="ver_grupos">Ver Grupos</string>
+	<string name="perfil_nomeUser">Nome do Usuário</string>
+	<string name="perfil_info">Informações do Perfil</string>
+	<string name="perfil_email">Email</string>
+	<string name="perfil_dataNascimento">Data de Nascimento</string>
+	<string name="perfil_telefone">Telefone</string>
+	<string name="perfil_pass">Senha</string>
+	<string name="perfil_btnEditar">Editar Perfil</string>
+	<string name="perfil_btnCancelEdit">Cancelar</string>
 
-  <string name="ver_grupos">Ver Grupos</string>
-  <string name="perfil_nomeUser">Nome do Usuário</string>
-  <string name="perfil_info">Informações do Perfil</string>
-  <string name="perfil_email">Email</string>
-  <string name="perfil_dataNascimento">Data de Nascimento</string>
-  <string name="perfil_telefone">Telefone</string>
-  <string name="perfil_pass">Senha</string>
-  <string name="perfil_btnEditar">Editar Perfil</string>
-  <string name="perfil_btnCancelEdit">Cancelar</string>
-
-  <string name="perfil_Senha">Senha</string>
-  <string name="perfil_ConfSenha">Confirmar Senha</string>
-  <string name="perfil_btnConf">Confirmar</string>
-  <string name="perfil_Cadastro">CADASTRO DE USUARIOS</string>
-  <string name="perfil_digiteNomeUser">Digite o nome do usuario</string>
-  <string name="perfil_digiteSenha">Digite a senha</string>
-  <string name="perfil_digiteEmail">Digite o email</string>
+	<string name="perfil_Senha">Senha</string>
+	<string name="perfil_ConfSenha">Confirmar Senha</string>
+	<string name="perfil_btnConf">Confirmar</string>
+	<string name="perfil_Cadastro">CADASTRO DE USUARIOS</string>
+	<string name="perfil_digiteNomeUser">Digite o nome do usuario</string>
+	<string name="perfil_digiteSenha">Digite a senha</string>
+	<string name="perfil_digiteEmail">Digite o email</string>
   <string name="perfil_digiteTelefone">Difite o Telefone</string>
+	<string name="cadUser">Selecione o tipo de usuario:</string>
+
+	<string-array name="user_types">
+		<item>Professor</item>
+		<item>Aluno</item>
+		<item>Administrador</item>
+		<item>Reitor</item>
+	</string-array>
 </resources>

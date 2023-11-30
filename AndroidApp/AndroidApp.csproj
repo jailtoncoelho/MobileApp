@@ -1,27 +1,23 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-    <ApplicationVersion>4</ApplicationVersion>
-    <ApplicationDisplayVersion>4.0</ApplicationDisplayVersion>
-    <TargetFrameworks>net8.0-android</TargetFrameworks>
-    <UseMaui>True</UseMaui>
-  </PropertyGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-android</TargetFramework>
+    <JavaSdkVersion>1.8</JavaSdkVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationId>com.ifpr.AndroidApp</ApplicationId>
+		<ApplicationVersion>5</ApplicationVersion>
+		<ApplicationDisplayVersion>5.0</ApplicationDisplayVersion>
+	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndroidLib\AndroidLib.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resources\layout\activity_turmas.xml" />
-    <None Remove="Resources\layout\evento_item_view.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drawable\ic_account.xml" />
-    <None Include="Resources\drawable\ic_events.xml" />
-    <None Include="Resources\drawable\ic_homepage.xml" />
-    <None Include="Resources\drawable\ic_settings.xml" />
-  </ItemGroup>
+	<ItemGroup>
+	  <None Include="Resources\drawable\ic_account.xml" />
+	  <None Include="Resources\drawable\ic_events.xml" />
+	  <None Include="Resources\drawable\ic_homepage.xml" />
+	  <None Include="Resources\drawable\ic_settings.xml" />
+	</ItemGroup>
   <ItemGroup>
     <None Include="Resources\values\drawables.xml" />
   </ItemGroup>
@@ -40,8 +36,10 @@
     <None Include="Resources\layout\activity_perfilUsuario.xml" />
     <None Include="Resources\layout\activity_settings.xml" />
     <None Include="Resources\layout\activity_sobre.xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\layout\activity_turmas.xml" />
+    <None Include="Resources\layout\evento_item_view.xml" />
+	</ItemGroup>
+	<ItemGroup>
     <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
     <PackageReference Include="Xamarin.Firebase.Common" Version="120.3.3.1" />
