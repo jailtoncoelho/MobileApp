@@ -42,7 +42,7 @@
 	<string name="perfil_pass">Senha</string>
 	<string name="perfil_btnEditar">Editar Perfil</string>
 	<string name="perfil_btnCancelEdit">Cancelar</string>
-  <string name="perfil_Campus">Digite o Campus</string>
+  <string name="perfil_Campus">Digite o Campus</string>  
 
 	<string name="perfil_Senha">Senha</string>
 	<string name="perfil_ConfSenha">Confirmar Senha</string>
@@ -54,6 +54,7 @@
 	<string name="perfil_CPF">CPF</string>
 	<string name="perfil_digiteCPF">Digite o seu CPF</string>
   <string name="perfil_digiteTelefone">Difite o Telefone</string>
+  <string name="perfil_digiteDataNascimento">Digite a Data de Nascimento</string>
 	<string name="cadUser">Selecione o tipo de usuario:</string>
 
 	<string-array name="user_types">
