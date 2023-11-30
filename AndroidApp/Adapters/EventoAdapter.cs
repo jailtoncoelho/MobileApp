@@ -66,6 +66,7 @@ namespace AndroidApp.Adapters
                 nomeTextView.Text = evento.Nome;
                 descricaoTextView.Text = evento.Descricao;
                 dataTextView.Text = evento.Data;
+                dataTextView.Text = evento.Observacoes;
 
                 ((LinearLayout)view).AddView(nomeTextView);
                 ((LinearLayout)view).AddView(descricaoTextView);
