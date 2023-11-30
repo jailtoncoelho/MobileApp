@@ -20,7 +20,7 @@ namespace AndroidAppTest
         private const string DescricaoEvento = "Hallowen";
         private const string NomeEvento = "Hallowen";
         private const string DataEvento = "06/11/2023";
-        private const string Observacao = "Comparecer Fantasiado para participar da premiação";
+        private const string Observacao = "Comparecer Fantasiado para participar da premiacao";
         [SetUp]
         public void Setup()
         {
