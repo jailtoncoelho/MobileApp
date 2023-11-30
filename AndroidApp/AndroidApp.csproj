@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net7.0-android</TargetFramework>
     <JavaSdkVersion>1.8</JavaSdkVersion>
@@ -6,8 +6,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ApplicationId>com.ifpr.AndroidApp</ApplicationId>
-		<ApplicationVersion>5</ApplicationVersion>
-		<ApplicationDisplayVersion>5.0</ApplicationDisplayVersion>
+		<ApplicationVersion>6</ApplicationVersion>
+		<ApplicationDisplayVersion>6.0</ApplicationDisplayVersion>
 	</PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\AndroidLib\AndroidLib.csproj" />

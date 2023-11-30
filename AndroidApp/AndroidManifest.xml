@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          android:versionCode="5"
-          android:versionName="Wolverine"
+          android:versionCode="6"
+          android:versionName="Loki"
           package="com.ifpr_telemacoborba.alerts">
   <application android:allowBackup="true"
                android:icon="@mipmap/appicon"
