@@ -54,13 +54,14 @@ namespace AndroidApp.Activities
             var nomeEvento = FindViewById<EditText>(Resource.Id.edtNomeEvento);
             var descricaoevento = FindViewById<EditText>(Resource.Id.edtDescricaoEvento);
             var dataEvento = FindViewById<DatePicker>(Resource.Id.datePickerDataEvento);
-
+            var obsEvento = FindViewById<EditText>(Resource.Id.etdObservacaoEvento);
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
                 Nome = nomeEvento?.Text,
                 Descricao = descricaoevento?.Text,
-                Data = dataEvento?.DateTime.ToShortDateString()
+                Data = dataEvento?.DateTime.ToShortDateString(),
+                Observacao = obsEvento?.Text
             };            
 
             // Converta o objeto para JSON
@@ -78,7 +79,8 @@ namespace AndroidApp.Activities
                 // reinicia valores dos campos da tela
                 nomeEvento.Text = "";
                 descricaoevento.Text = "";
-                dataEvento.DateTime = DateTime.Now;                
+                dataEvento.DateTime = DateTime.Now;
+                obsEvento.Text = "";
                
                 Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
 
