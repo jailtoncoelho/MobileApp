@@ -73,7 +73,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:text="@string/cadastro_evento_responsavel"
+        android:text="@string/evento_responsavel"
         android:id="@+id/txtResponsavelEvento" />
     <EditText
         android:layout_margin="@dimen/activity_horizontal_margin"

@@ -45,7 +45,6 @@ namespace AndroidAppTest
                 Senha = Password,
                 DataNasc = DataNascimento,
                 Campus = Campuss,
-                Senha = Password,
                 Cpf = CPF,
                 Telefone = Phone
             };
@@ -65,7 +64,6 @@ namespace AndroidAppTest
                   Email = item.Object.Email,
                   Senha = item.Object.Senha,
                   Campus = item.Object.Campus,
-                  Senha = item.Object.Senha,
                   Telefone = item.Object.Telefone,
                   CPF = item.Object.CPF,
                   DataNasc = item.Object.DataNasc                    

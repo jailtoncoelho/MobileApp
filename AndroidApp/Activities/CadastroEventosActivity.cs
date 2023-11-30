@@ -55,21 +55,21 @@ namespace AndroidApp.Activities
             var descricaoevento = FindViewById<EditText>(Resource.Id.edtDescricaoEvento);
             var dataEvento = FindViewById<DatePicker>(Resource.Id.datePickerDataEvento);
             var obsEvento = FindViewById<EditText>(Resource.Id.etdObservacaoEvento);
+            var responsavelEvento = FindViewById<EditText>(Resource.Id.edtResponsavelEvento);
+
             // Crie um objeto com os dados que deseja salvar
             var dados = new
             {
                 Nome = nomeEvento?.Text,
                 Descricao = descricaoevento?.Text,
                 Data = dataEvento?.DateTime.ToShortDateString(),
-                Observacao = obsEvento?.Text
+                Observacao = obsEvento?.Text,
+                Responsavel = responsavelEvento?.Text
             };            
 
             // Converta o objeto para JSON
-            string jsonDados = JsonConvert.SerializeObject(dados);
-
-          
-
-
+            string jsonDados = JsonConvert.SerializeObject(dados);     
+            
             var result = await firebase
                 .Child("eventos")
                 .PostAsync(jsonDados);
@@ -81,7 +81,9 @@ namespace AndroidApp.Activities
                 descricaoevento.Text = "";
                 dataEvento.DateTime = DateTime.Now;
                 obsEvento.Text = "";
-               
+                responsavelEvento.Text = "";
+
+
                 Toast.MakeText(this, "Evento cadastrado com sucesso!", ToastLength.Short)?.Show();
 
                 Finish();
