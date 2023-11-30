@@ -1,6 +1,4 @@
-﻿
-
-namespace AndroidLib
+﻿namespace AndroidLib
 {
     public class Evento
     {
