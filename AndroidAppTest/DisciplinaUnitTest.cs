@@ -17,10 +17,10 @@ namespace AndroidAppTest
         private const string DatabaseUrl = "https://ifpr-alerts-default-rtdb.firebaseio.com/";
         private const string DataPath = "disciplina_teste";
 
-        private const string Nome = "Jailton";
-        private const string Professor = "Jailton";
-        private const string Descricao = "28/11/2024";
-        private const string Nascimento = "20/02/2002";
+        private const string NomeDisciplina = "Jailton";
+        private const string ProfessorDisciplina = "Jailton";
+        private const string DescricaoDisciplina = "28/11/2024";
+        private const string NascimentoDisciplina = "20/02/2002";
         [SetUp]
         public void Setup()
         {
@@ -41,10 +41,10 @@ namespace AndroidAppTest
             // Data to be saved
             var dataToSave = new
             {
-                NomePessoa = Nome,
-                ProfessorPessoa = Professor,
-                DescricaoData = Descricao,
-                NascimentoData = Nascimento
+                Nome = NomeDisciplina,
+                Professor = ProfessorDisciplina,
+                Descricao = DescricaoDisciplina,
+                Nascimento = NascimentoDisciplina
 
             };
 
@@ -60,16 +60,16 @@ namespace AndroidAppTest
                   Professor = item.Object.Professor,
                   Descricao = item.Object.Nome,
                   Nascimento = item.Object.Nascimento,
-              }).Where(item => item.Nome == Nome && item.Professor == Professor && item.Descricao == Descricao && item.Nascimento == Nascimento).FirstOrDefault();
+              }).Where(item => item.Nome == NomeDisciplina && item.Professor == ProfessorDisciplina && item.Descricao == DescricaoDisciplina && item.Nascimento == NascimentoDisciplina).FirstOrDefault();
 
             Assert.IsNotNull(disciplina);
 
             // Assert that the retrieved data matches the saved data
 
-            Assert.That((string)disciplina.Nome, Is.EqualTo(Nome));
-            Assert.That((string)disciplina.Professor, Is.EqualTo(Professor));
-            Assert.That((string)disciplina.Descricao, Is.EqualTo(Descricao));
-            Assert.That((string)disciplina.Nascimento, Is.EqualTo(Nascimento));
+            Assert.That((string)disciplina.Nome, Is.EqualTo(NomeDisciplina));
+            Assert.That((string)disciplina.Professor, Is.EqualTo(ProfessorDisciplina));
+            Assert.That((string)disciplina.Descricao, Is.EqualTo(DescricaoDisciplina));
+            Assert.That((string)disciplina.Nascimento, Is.EqualTo(NascimentoDisciplina));
         }
     }
 }
